@@ -1,119 +1,124 @@
-# MooTrack
-
-### Intelligent Cattle Monitoring and Behavior Analysis System
-
-MooTrack is an AI-powered cattle monitoring system designed to analyze cattle behavior and identify meaningful changes using multiple data sources.
-
-The project combines deep learning, behavioral analysis, audio analysis, and a web-based interface to support smarter and more efficient cattle monitoring.
 
 ---
+
+# 2. `behavior_model/README.md`
+
+Use this for Person 2:
+
+```markdown
+# MooTrack - Behaviour Deep Learning Module
 
 ## Overview
 
-Monitoring cattle continuously can be difficult, especially when farmers need to observe the behavior and condition of multiple animals.
+This module is responsible for cattle behaviour recognition in the MooTrack project.
 
-MooTrack aims to provide an intelligent monitoring solution by analyzing information collected from cattle and presenting useful insights through a centralized dashboard.
+The module uses a pre-trained ResNet18 Convolutional Neural Network (CNN) and fine-tunes it on cattle behaviour data.
 
-The system is being developed as a multimodal AI solution with three major components:
-
-- Behavioral Analysis
-- Audio Analysis
-- Web Dashboard
+The model takes a cattle image or labelled keyframe as input and predicts the observed behaviour.
 
 ---
 
-## Objectives
+## Project Pipeline
 
-The main objectives of MooTrack are:
-
-- Analyze cattle behavior using AI and deep learning.
-- Detect unusual or abnormal behavioral patterns.
-- Analyze cattle-related audio signals for useful information.
-- Combine different sources of information for better monitoring.
-- Provide an easy-to-use web interface for viewing results.
-- Reduce the need for continuous manual monitoring.
-- Explore practical applications of deep learning in livestock management.
-
----
-
-## System Components
-
-### 1. Behavioral Analysis
-
-This module focuses on analyzing cattle behavior using visual or behavioral data.
-
-Possible activities include:
-
-- Movement analysis
-- Activity recognition
-- Feeding-related behavior
-- Resting behavior
-- Abnormal behavior detection
-
-The behavioral analysis module will use a deep learning model trained on a suitable cattle behavior dataset.
+Cattle Image / Keyframe
+↓
+Image Preprocessing
+↓
+Pre-trained ResNet18
+↓
+Fine-Tuning
+↓
+Behaviour Classification
+↓
+Confidence Score
 
 ---
 
-### 2. Audio Analysis
+## Dataset
 
-This module focuses on analyzing audio signals associated with cattle.
+### CBVD-5 Cow Behavior Video Dataset
 
-The system can explore patterns in cattle vocalizations and other relevant audio signals.
+Dataset:
+CBVD-5 Cow Behavior Video Dataset
 
-The audio module will involve:
+Source:
+https://www.kaggle.com/datasets/fandaoerji/cbvd-5cow-behavior-video-dataset
 
-- Audio preprocessing
-- Feature extraction
-- Audio classification
-- Deep learning based prediction
+The dataset contains labelled cattle behaviour samples obtained from cattle monitoring/video data.
 
-The exact model and dataset will be finalized during development.
+Before training, the actual downloaded dataset structure and annotation format must be inspected.
 
----
-
-### 3. Web Dashboard
-
-The web application acts as the interface for the MooTrack system.
-
-The dashboard will be used to:
-
-- Display cattle information
-- Display behavior predictions
-- Display audio analysis results
-- Show detected abnormal patterns
-- Present monitoring information
-- Provide an easy-to-understand interface for users
+The exact class names used by the implementation must come from the dataset itself.
 
 ---
 
-## Proposed Architecture
+## Behaviour Classes
+
+The commonly documented CBVD-5 behaviour categories include:
+
+- Standing
+- Lying
+- Feeding
+- Drinking
+- Rumination
+
+The implementation must verify the actual labels present in the downloaded dataset before training.
+
+---
+
+## Deep Learning Model
+
+### ResNet18
+
+MooTrack uses a pre-trained ResNet18 Convolutional Neural Network.
+
+ResNet18 is an image-based Deep Learning model suitable for image classification.
+
+The model is not trained from scratch.
+
+Instead, a pre-trained ResNet18 is adapted to the cattle behaviour classification task through transfer learning and fine-tuning.
+
+### Learning Approach
+
+- Transfer Learning
+- Fine-Tuning
+
+---
+
+## Image Preprocessing
+
+Typical preprocessing includes:
+
+1. Loading the cattle image/keyframe
+2. Resizing the image
+3. Converting the image into the required tensor format
+4. Normalizing the image
+5. Passing the processed image to ResNet18
+
+Training and inference should use compatible preprocessing.
+
+---
+
+## Important Dataset Handling
+
+The dataset may contain multiple frames originating from the same video.
+
+To reduce data leakage:
+
+- Avoid placing closely related frames from the same original video into both training and test sets when source metadata allows this.
+- Keep the test set unseen during training and model selection.
+- Use the actual annotations provided by the dataset.
+
+---
+
+## Project Structure
 
 ```text
-                  ┌─────────────────────┐
-                  │      Cattle Data    │
-                  └──────────┬──────────┘
-                             │
-             ┌───────────────┴───────────────┐
-             │                               │
-             ▼                               ▼
-    ┌─────────────────┐             ┌─────────────────┐
-    │ Behavior Data   │             │  Audio Data     │
-    └────────┬────────┘             └────────┬────────┘
-             │                               │
-             ▼                               ▼
-    ┌─────────────────┐             ┌─────────────────┐
-    │ Behavior Model  │             │  Audio Model    │
-    └────────┬────────┘             └────────┬────────┘
-             │                               │
-             └───────────────┬───────────────┘
-                             ▼
-                  ┌─────────────────────┐
-                  │ Prediction /        │
-                  │ Analysis Layer      │
-                  └──────────┬──────────┘
-                             │
-                             ▼
-                  ┌─────────────────────┐
-                  │   MooTrack Web      │
-                  │     Dashboard       │
-                  └─────────────────────┘
+behavior_model/
+├── train.py
+├── preprocessing.py
+├── predict.py
+├── config.py
+├── README.md
+├── model/
+└── results/
