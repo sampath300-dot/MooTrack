@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Large Model weights & checkpoints (downloaded/trained)
+audio_model/model/
+*.bin
+*.pt
+*.pth
+*.safetensors
+
+# Datasets cache
+.cache/
+data/
+
+# Live Recordings Vault
+audio_model/recordings/*.wav
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
