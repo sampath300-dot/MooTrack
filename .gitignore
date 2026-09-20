@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
 
 # Virtual environments
 venv/
@@ -9,10 +11,8 @@ venv/
 env/
 ENV/
 
-# Jupyter
+# Jupyter & IDE
 .ipynb_checkpoints/
-
-# IDE
 .vscode/
 .idea/
 
@@ -20,26 +20,24 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Python build files
-build/
-dist/
-*.egg-info/
-
-# Machine Learning models
+# Large Model weights & checkpoints (downloaded/trained)
+audio_model/model/
+behavior_model/model/
+*.bin
 *.pt
 *.pth
 *.ckpt
 *.safetensors
 
-# Datasets
+# Datasets cache
+.cache/
 data/
 datasets/
 
-# Environment variables
-.env
+# Live Recordings Vault
+audio_model/recordings/*.wav
 
-# Logs
+# Logs & Temporary files
 *.log
-
-# Temporary files
 *.tmp
+.env

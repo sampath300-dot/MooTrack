@@ -1,0 +1,1834 @@
+[
+  {
+    "timestamp": "2026-09-17 10:33:38",
+    "type": "audio",
+    "filename": "distress_call.wav",
+    "predicted_class": "Negative",
+    "confidence": 0.5212000012397766,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Negative",
+      "confidence": 0.5212000012397766,
+      "probabilities": {
+        "Negative": 0.5212000012397766,
+        "Positive": 0.4787999987602234
+      },
+      "speech_confidence": 0.1,
+      "cattle_confidence": 99.3,
+      "audio_metrics": {
+        "duration_sec": 1.56,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0724,
+        "spectral_centroid_hz": 1473.4,
+        "spectral_rolloff_hz": 2993.8,
+        "zero_crossing_rate": 0.0767,
+        "f0_pitch_hz": 392.4,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Negative Emotional Valence. In cattle ethology, this acoustic profile is observed during social separation, physical isolation, milking delays, or maternal separation distress."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 10:33:35",
+    "type": "audio",
+    "filename": "cow_moo_1.wav",
+    "predicted_class": "Positive",
+    "confidence": 0.6154999732971191,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.6154999732971191,
+      "probabilities": {
+        "Negative": 0.38449999690055847,
+        "Positive": 0.6154999732971191
+      },
+      "speech_confidence": 0.7,
+      "cattle_confidence": 94.1,
+      "audio_metrics": {
+        "duration_sec": 0.79,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0614,
+        "spectral_centroid_hz": 1724.0,
+        "spectral_rolloff_hz": 3572.5,
+        "zero_crossing_rate": 0.116,
+        "f0_pitch_hz": 478.5,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 10:32:28",
+    "type": "audio",
+    "filename": "human_speech.wav",
+    "predicted_class": "Human Speaking",
+    "confidence": 0.88,
+    "details": {
+      "is_cattle_call": false,
+      "is_human_speech": true,
+      "signal_classification": "Human Speaking",
+      "class": "Human Speaking",
+      "detected_speaker": "Human Speaking",
+      "confidence": 0.88,
+      "probabilities": {
+        "Human Speaking": 0.88,
+        "Cattle Vocalization": 0.12
+      },
+      "error": "Human Speaking Detected: High fricative and formant transitions detected. Please record a cattle call.",
+      "speech_confidence": 88.0,
+      "cattle_confidence": 0.0,
+      "audio_metrics": {
+        "duration_sec": 1.5,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.227,
+        "spectral_centroid_hz": 3037.1,
+        "spectral_rolloff_hz": 6259.8,
+        "zero_crossing_rate": 0.1453,
+        "f0_pitch_hz": 799.7,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "\ud83d\udde3\ufe0f Human Speaking Detected. The AudioSet sound discriminator recognized human voice/speech. MooTrack's acoustic model is exclusively trained for cattle vocalizations (mooing)."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 10:03:52",
+    "type": "audio",
+    "filename": "distress_call.wav",
+    "predicted_class": "Negative",
+    "confidence": 0.8054999709129333,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Negative",
+      "confidence": 0.8054999709129333,
+      "probabilities": {
+        "Negative": 0.8054999709129333,
+        "Positive": 0.19449999928474426
+      },
+      "speech_confidence": 0.1,
+      "cattle_confidence": 99.3,
+      "audio_metrics": {
+        "duration_sec": 1.56,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0724,
+        "spectral_centroid_hz": 1473.4,
+        "spectral_rolloff_hz": 2993.8,
+        "zero_crossing_rate": 0.0767,
+        "f0_pitch_hz": 392.4,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Negative Emotional Valence. In cattle ethology, this acoustic profile is observed during social separation, physical isolation, milking delays, or maternal separation distress."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 10:03:44",
+    "type": "audio",
+    "filename": "cow_moo_1.wav",
+    "predicted_class": "Negative",
+    "confidence": 0.7404999732971191,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Negative",
+      "confidence": 0.7404999732971191,
+      "probabilities": {
+        "Negative": 0.7404999732971191,
+        "Positive": 0.25949999690055847
+      },
+      "speech_confidence": 0.7,
+      "cattle_confidence": 94.1,
+      "audio_metrics": {
+        "duration_sec": 0.79,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0614,
+        "spectral_centroid_hz": 1724.0,
+        "spectral_rolloff_hz": 3572.5,
+        "zero_crossing_rate": 0.116,
+        "f0_pitch_hz": 478.5,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Negative Emotional Valence. In cattle ethology, this acoustic profile is observed during social separation, physical isolation, milking delays, or maternal separation distress."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 09:56:00",
+    "type": "audio",
+    "filename": "cow_moo_2.wav",
+    "predicted_class": "Positive",
+    "confidence": 0.7989000082015991,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.7989000082015991,
+      "probabilities": {
+        "Negative": 0.20110000669956207,
+        "Positive": 0.7989000082015991
+      },
+      "speech_confidence": 0.7,
+      "cattle_confidence": 94.1,
+      "audio_metrics": {
+        "duration_sec": 0.79,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0614,
+        "spectral_centroid_hz": 1724.0,
+        "spectral_rolloff_hz": 3572.5,
+        "zero_crossing_rate": 0.116,
+        "f0_pitch_hz": 478.5,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 09:55:47",
+    "type": "audio",
+    "filename": "cow_moo_1.wav",
+    "predicted_class": "Positive",
+    "confidence": 0.7989000082015991,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.7989000082015991,
+      "probabilities": {
+        "Negative": 0.20110000669956207,
+        "Positive": 0.7989000082015991
+      },
+      "speech_confidence": 0.7,
+      "cattle_confidence": 94.1,
+      "audio_metrics": {
+        "duration_sec": 0.79,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0614,
+        "spectral_centroid_hz": 1724.0,
+        "spectral_rolloff_hz": 3572.5,
+        "zero_crossing_rate": 0.116,
+        "f0_pitch_hz": 478.5,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 09:55:33",
+    "type": "vision",
+    "filename": "sample_feeding.jpg",
+    "predicted_class": "feeding",
+    "confidence": 0.9724000096321106,
+    "details": {
+      "class": "feeding",
+      "confidence": 0.9724000096321106,
+      "probabilities": {
+        "drinking": 0.012000000104308128,
+        "feeding": 0.9724000096321106,
+        "lying": 0.002899999963119626,
+        "rumination": 0.007600000128149986,
+        "standing": 0.005100000184029341
+      },
+      "description": "Cattle is actively consuming forage, silage, or concentrate from the feed bunk or pasture. Key indicator of dry matter intake and metabolic health.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-17 09:17:54",
+    "type": "vision",
+    "filename": "sample_feeding.jpg",
+    "predicted_class": "feeding",
+    "confidence": 0.9724000096321106,
+    "details": {
+      "class": "feeding",
+      "confidence": 0.9724000096321106,
+      "probabilities": {
+        "drinking": 0.012000000104308128,
+        "feeding": 0.9724000096321106,
+        "lying": 0.002899999963119626,
+        "rumination": 0.007600000128149986,
+        "standing": 0.005100000184029341
+      },
+      "description": "Cattle is actively consuming forage, silage, or concentrate from the feed bunk or pasture. Key indicator of dry matter intake and metabolic health.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-17 09:09:47",
+    "type": "vision",
+    "filename": "sample_standing.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.7218000292778015,
+    "details": {
+      "class": "standing",
+      "confidence": 0.7218000292778015,
+      "probabilities": {
+        "drinking": 0.10830000042915344,
+        "feeding": 0.023399999365210533,
+        "lying": 0.12559999525547028,
+        "rumination": 0.020899999886751175,
+        "standing": 0.7218000292778015
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-17 09:09:29",
+    "type": "audio",
+    "filename": "cow_moo_1.wav",
+    "predicted_class": "Positive",
+    "confidence": 0.6204000115394592,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.6204000115394592,
+      "probabilities": {
+        "Negative": 0.37959998846054077,
+        "Positive": 0.6204000115394592
+      },
+      "speech_confidence": 0.7,
+      "cattle_confidence": 94.1,
+      "audio_metrics": {
+        "duration_sec": 0.79,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0614,
+        "spectral_centroid_hz": 1724.0,
+        "spectral_rolloff_hz": 3572.5,
+        "zero_crossing_rate": 0.116,
+        "f0_pitch_hz": 478.5,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 09:09:26",
+    "type": "audio",
+    "filename": "distress_call.wav",
+    "predicted_class": "Positive",
+    "confidence": 0.5101000070571899,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.5101000070571899,
+      "probabilities": {
+        "Negative": 0.48989999294281006,
+        "Positive": 0.5101000070571899
+      },
+      "speech_confidence": 0.1,
+      "cattle_confidence": 99.3,
+      "audio_metrics": {
+        "duration_sec": 1.56,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0724,
+        "spectral_centroid_hz": 1473.4,
+        "spectral_rolloff_hz": 2993.8,
+        "zero_crossing_rate": 0.0767,
+        "f0_pitch_hz": 392.4,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-09-17 09:02:23",
+    "type": "vision_video",
+    "filename": "sample_cattle_video.mp4",
+    "predicted_class": "drinking",
+    "confidence": 0.9603,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.9603,
+      "probabilities": {
+        "drinking": 0.2353,
+        "feeding": 0.2192,
+        "lying": 0.2848,
+        "rumination": 0.1331,
+        "standing": 0.1276
+      },
+      "activity_breakdown": {
+        "drinking": 20.0,
+        "feeding": 20.0,
+        "lying": 20.0,
+        "rumination": 20.0,
+        "standing": 20.0
+      },
+      "dominant_frequency_percent": 20.0,
+      "total_frames_analyzed": 5,
+      "transitions_count": 4,
+      "transitions": [
+        {
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "from_class": "standing",
+          "to_class": "feeding"
+        },
+        {
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "from_class": "feeding",
+          "to_class": "lying"
+        },
+        {
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "from_class": "lying",
+          "to_class": "rumination"
+        },
+        {
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "from_class": "rumination",
+          "to_class": "drinking"
+        }
+      ],
+      "timeline": [
+        {
+          "frame_index": 0,
+          "timestamp_seconds": 0.0,
+          "timestamp_formatted": "00:00.0",
+          "class": "standing",
+          "confidence": 0.5480999946594238,
+          "probabilities": {
+            "drinking": 0.15729999542236328,
+            "feeding": 0.04919999837875366,
+            "lying": 0.19949999451637268,
+            "rumination": 0.045899998396635056,
+            "standing": 0.5480999946594238
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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avoPyoA5LafQ0bT6Gut2r6D8qNq+g/KgDktrehpK61lG08DpXJv94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBV+8PrXWKy7R8w6VyVLuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA6xmXafmHSuTb7x+tG4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="
+        },
+        {
+          "frame_index": 20,
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "class": "feeding",
+          "confidence": 0.9668999910354614,
+          "probabilities": {
+            "drinking": 0.012000000104308128,
+            "feeding": 0.9668999910354614,
+            "lying": 0.005100000184029341,
+            "rumination": 0.009800000116229057,
+            "standing": 0.006000000052154064
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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HSuUb7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR09a5Knbj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdPWuUf7x+tG4+p/Om0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 40,
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "class": "lying",
+          "confidence": 0.9122999906539917,
+          "probabilities": {
+            "drinking": 0.00930000003427267,
+            "feeding": 0.019600000232458115,
+            "lying": 0.9122999906539917,
+            "rumination": 0.03550000116229057,
+            "standing": 0.02329999953508377
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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VG1vQ/lXW7V9B+VG1fQflQByW1vQ/lRtb0P5V1u1fQflRtX0H5UAckVb+6aSutZRtPArlH+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rq1Zdo5HSuSp24+poA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z"
+        },
+        {
+          "frame_index": 60,
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "class": "rumination",
+          "confidence": 0.5597000122070312,
+          "probabilities": {
+            "drinking": 0.03779999911785126,
+            "feeding": 0.05380000174045563,
+            "lying": 0.3037000000476837,
+            "rumination": 0.5597000122070312,
+            "standing": 0.04500000178813934
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCADwAUADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC7RRViO0lkgWRBkM+zA9a+JnOMNZOx68pKOrZXoqzLZzRvINhYIcEjpTVt5PlLgojdHYcVPtoNXTEqkWr3IKKtzWMiPsQiVgMkJniojbTfL+7b5uBxRGtTkrpgqsGrpkNFWfsc2xjsIYELtxzUawsYHl4wpCmmqsHswVSL2ZFRU728gCEKWDAY47ntTWhlRN7IwX1xQqkXsxqcXsyKirT2hSFXMi7mAYJzk5pn2abeF8ps4zjFJVoPVMSqRfUgoqzFZzSBjsKqoJJI9Kr1UZxk2k9hqUW7JiUVaFpm287zo9vTHOc+lRpCxkRWITeMgmpVaDu77CVSLvZkNFWZLRkulgDKznjjtTpbGVCmzEgYEgp7Uvb09Ndxe2hpruVKKcylWKsCCOCDTa1NAooopgFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFWorx4rdY4+ME5PrmqtFROnGatJXJlCM9JI0W1HcxYx/Nklfm6ZGOfWoprzzYmUJhm27jn09BVOisY4WlGzS2M1h6a1SLj3m552CYMihevTGP8KmXUgiBUhxyM8+2KzaKHhaTVmgeHptWaNCO/EaNGsR8tuCC2Tj61DBcRpDJFJGXRmDcNjGKq0U1hqavZb+b6DVCCv5l9dQ2sdsfy7AqgnOCOhpk16ZLYR7MHaFJz1xVOihYWknewlh6ad7Fw38n7kKSFjAG3PBxU39pcsPL+QjkZHrn0rNopSwlGW8QeHpvdGidQ3AloyXwyg7uxqmJpBEYw3yHtioqKqGHpw0iio0YQ2ROs5W28oDnfvz+FSm9Z2jMy7lQYwDjn1zVOim6EHq0DpRe6LzXwM6SiL50wFJbP5+tPbUBvXbGVQZ4Ddc/hWdRUPCUnbQh4em90STuJZncKFDHOB2qOiiuhJRVkbJWVkFFFFMYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAU7a3ofyoT7w+tdWqjaOB0oA5Ta3ofyo2t6H8q6zavoPyo2r6D8qAOT2t6H8qNreh/Kus2r6D8qNq+g/KgDk9reh/Kja3ofyrrNq+g/KjavoPyoA5Pa3ofyo2t6H8q6zavoPyo2r6D8qAOT2t6H8qNreh/Kus2r6D8qNq+g/KgDk9reh/Kja3ofyrrNq+g/KjavoPyoA5Pa3ofyo2t6H8q6zavoPyo2r6D8qAOT2t6H8qNreh/Kus2r6D8qNq+g/KgDk9reh/Kja3ofyrrNq+g/KjavoPyoA5Pa3ofyo2t6H8q6zavoPyo2r6D8qAOT2t6H8qbXWso2ngdK5R/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/wB4/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR0rkqduPqaAOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 80,
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "class": "drinking",
+          "confidence": 0.9603000283241272,
+          "probabilities": {
+            "drinking": 0.9603000283241272,
+            "feeding": 0.006399999838322401,
+            "lying": 0.0034000000450760126,
+            "rumination": 0.014399999752640724,
+            "standing": 0.01549999974668026
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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J94fWutX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5J/vH611rfdP0rkn+8frQAlFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA5PvD611asu1eR0rkqXcfU0AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdYzLtbkdK5R/vH60m4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+        }
+      ],
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "summary": "Video Analysis (5.0s, 5 frames sampled): Dominant behavior is 'drinking' (20.0% of observed video). Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "video_metadata": {
+        "video_path": "C:\\Users\\sampa\\AppData\\Local\\Temp\\tmphjwmw825.mp4",
+        "filename": "tmphjwmw825.mp4",
+        "total_frames": 100,
+        "fps": 20.0,
+        "width": 640,
+        "height": 480,
+        "duration_seconds": 5.0,
+        "sampled_frames": 5,
+        "sample_stride": 20
+      },
+      "model": "ResNet18 (Video Temporal Frame Aggregation)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 10:09:18",
+    "type": "vision_video",
+    "filename": "sample_cattle_video.mp4",
+    "predicted_class": "drinking",
+    "confidence": 0.9603,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.9603,
+      "probabilities": {
+        "drinking": 0.2353,
+        "feeding": 0.2192,
+        "lying": 0.2848,
+        "rumination": 0.1331,
+        "standing": 0.1276
+      },
+      "activity_breakdown": {
+        "drinking": 20.0,
+        "feeding": 20.0,
+        "lying": 20.0,
+        "rumination": 20.0,
+        "standing": 20.0
+      },
+      "dominant_frequency_percent": 20.0,
+      "total_frames_analyzed": 5,
+      "transitions_count": 4,
+      "transitions": [
+        {
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "from_class": "standing",
+          "to_class": "feeding"
+        },
+        {
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "from_class": "feeding",
+          "to_class": "lying"
+        },
+        {
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "from_class": "lying",
+          "to_class": "rumination"
+        },
+        {
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "from_class": "rumination",
+          "to_class": "drinking"
+        }
+      ],
+      "timeline": [
+        {
+          "frame_index": 0,
+          "timestamp_seconds": 0.0,
+          "timestamp_formatted": "00:00.0",
+          "class": "standing",
+          "confidence": 0.5480999946594238,
+          "probabilities": {
+            "drinking": 0.15729999542236328,
+            "feeding": 0.04919999837875366,
+            "lying": 0.19949999451637268,
+            "rumination": 0.045899998396635056,
+            "standing": 0.5480999946594238
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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avoPyoA5LafQ0bT6Gut2r6D8qNq+g/KgDktrehpK61lG08DpXJv94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBV+8PrXWKy7R8w6VyVLuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA6xmXafmHSuTb7x+tG4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="
+        },
+        {
+          "frame_index": 20,
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "class": "feeding",
+          "confidence": 0.9668999910354614,
+          "probabilities": {
+            "drinking": 0.012000000104308128,
+            "feeding": 0.9668999910354614,
+            "lying": 0.005100000184029341,
+            "rumination": 0.009800000116229057,
+            "standing": 0.006000000052154064
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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HSuUb7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR09a5Knbj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdPWuUf7x+tG4+p/Om0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 40,
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "class": "lying",
+          "confidence": 0.9122999906539917,
+          "probabilities": {
+            "drinking": 0.00930000003427267,
+            "feeding": 0.019600000232458115,
+            "lying": 0.9122999906539917,
+            "rumination": 0.03550000116229057,
+            "standing": 0.02329999953508377
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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VG1vQ/lXW7V9B+VG1fQflQByW1vQ/lRtb0P5V1u1fQflRtX0H5UAckVb+6aSutZRtPArlH+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rq1Zdo5HSuSp24+poA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z"
+        },
+        {
+          "frame_index": 60,
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "class": "rumination",
+          "confidence": 0.5597000122070312,
+          "probabilities": {
+            "drinking": 0.03779999911785126,
+            "feeding": 0.05380000174045563,
+            "lying": 0.3037000000476837,
+            "rumination": 0.5597000122070312,
+            "standing": 0.04500000178813934
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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RQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/wB4/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR0rkqduPqaAOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 80,
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "class": "drinking",
+          "confidence": 0.9603000283241272,
+          "probabilities": {
+            "drinking": 0.9603000283241272,
+            "feeding": 0.006399999838322401,
+            "lying": 0.0034000000450760126,
+            "rumination": 0.014399999752640724,
+            "standing": 0.01549999974668026
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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J94fWutX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5J/vH611rfdP0rkn+8frQAlFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA5PvD611asu1eR0rkqXcfU0AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdYzLtbkdK5R/vH60m4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+        }
+      ],
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "summary": "Video Analysis (5.0s, 5 frames sampled): Dominant behavior is 'drinking' (20.0% of observed video). Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "video_metadata": {
+        "video_path": "C:\\Users\\sampa\\AppData\\Local\\Temp\\tmpz62fuhrz.mp4",
+        "filename": "tmpz62fuhrz.mp4",
+        "total_frames": 100,
+        "fps": 20.0,
+        "width": 640,
+        "height": 480,
+        "duration_seconds": 5.0,
+        "sampled_frames": 5,
+        "sample_stride": 20
+      },
+      "model": "ResNet18 (Video Temporal Frame Aggregation)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 10:09:18",
+    "type": "vision",
+    "filename": "sample_standing.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.7218000292778015,
+    "details": {
+      "class": "standing",
+      "confidence": 0.7218000292778015,
+      "probabilities": {
+        "drinking": 0.10830000042915344,
+        "feeding": 0.023399999365210533,
+        "lying": 0.12559999525547028,
+        "rumination": 0.020899999886751175,
+        "standing": 0.7218000292778015
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 09:52:37",
+    "type": "vision_video",
+    "filename": "sample_cattle_video.mp4",
+    "predicted_class": "drinking",
+    "confidence": 0.9603,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.9603,
+      "probabilities": {
+        "drinking": 0.2353,
+        "feeding": 0.2192,
+        "lying": 0.2848,
+        "rumination": 0.1331,
+        "standing": 0.1276
+      },
+      "activity_breakdown": {
+        "drinking": 20.0,
+        "feeding": 20.0,
+        "lying": 20.0,
+        "rumination": 20.0,
+        "standing": 20.0
+      },
+      "dominant_frequency_percent": 20.0,
+      "total_frames_analyzed": 5,
+      "transitions_count": 4,
+      "transitions": [
+        {
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "from_class": "standing",
+          "to_class": "feeding"
+        },
+        {
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "from_class": "feeding",
+          "to_class": "lying"
+        },
+        {
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "from_class": "lying",
+          "to_class": "rumination"
+        },
+        {
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "from_class": "rumination",
+          "to_class": "drinking"
+        }
+      ],
+      "timeline": [
+        {
+          "frame_index": 0,
+          "timestamp_seconds": 0.0,
+          "timestamp_formatted": "00:00.0",
+          "class": "standing",
+          "confidence": 0.5480999946594238,
+          "probabilities": {
+            "drinking": 0.15729999542236328,
+            "feeding": 0.04919999837875366,
+            "lying": 0.19949999451637268,
+            "rumination": 0.045899998396635056,
+            "standing": 0.5480999946594238
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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avoPyoA5LafQ0bT6Gut2r6D8qNq+g/KgDktrehpK61lG08DpXJv94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBV+8PrXWKy7R8w6VyVLuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA6xmXafmHSuTb7x+tG4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="
+        },
+        {
+          "frame_index": 20,
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "class": "feeding",
+          "confidence": 0.9668999910354614,
+          "probabilities": {
+            "drinking": 0.012000000104308128,
+            "feeding": 0.9668999910354614,
+            "lying": 0.005100000184029341,
+            "rumination": 0.009800000116229057,
+            "standing": 0.006000000052154064
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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HSuUb7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR09a5Knbj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdPWuUf7x+tG4+p/Om0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 40,
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "class": "lying",
+          "confidence": 0.9122999906539917,
+          "probabilities": {
+            "drinking": 0.00930000003427267,
+            "feeding": 0.019600000232458115,
+            "lying": 0.9122999906539917,
+            "rumination": 0.03550000116229057,
+            "standing": 0.02329999953508377
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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VG1vQ/lXW7V9B+VG1fQflQByW1vQ/lRtb0P5V1u1fQflRtX0H5UAckVb+6aSutZRtPArlH+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rq1Zdo5HSuSp24+poA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z"
+        },
+        {
+          "frame_index": 60,
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "class": "rumination",
+          "confidence": 0.5597000122070312,
+          "probabilities": {
+            "drinking": 0.03779999911785126,
+            "feeding": 0.05380000174045563,
+            "lying": 0.3037000000476837,
+            "rumination": 0.5597000122070312,
+            "standing": 0.04500000178813934
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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RQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/wB4/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR0rkqduPqaAOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 80,
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "class": "drinking",
+          "confidence": 0.9603000283241272,
+          "probabilities": {
+            "drinking": 0.9603000283241272,
+            "feeding": 0.006399999838322401,
+            "lying": 0.0034000000450760126,
+            "rumination": 0.014399999752640724,
+            "standing": 0.01549999974668026
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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J94fWutX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5J/vH611rfdP0rkn+8frQAlFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA5PvD611asu1eR0rkqXcfU0AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdYzLtbkdK5R/vH60m4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+        }
+      ],
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "summary": "Video Analysis (5.0s, 5 frames sampled): Dominant behavior is 'drinking' (20.0% of observed video). Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "video_metadata": {
+        "video_path": "C:\\Users\\sampa\\AppData\\Local\\Temp\\tmpvr2hrsiq.mp4",
+        "filename": "tmpvr2hrsiq.mp4",
+        "total_frames": 100,
+        "fps": 20.0,
+        "width": 640,
+        "height": 480,
+        "duration_seconds": 5.0,
+        "sampled_frames": 5,
+        "sample_stride": 20
+      },
+      "model": "ResNet18 (Video Temporal Frame Aggregation)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 09:52:37",
+    "type": "vision",
+    "filename": "sample_standing.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.7218000292778015,
+    "details": {
+      "class": "standing",
+      "confidence": 0.7218000292778015,
+      "probabilities": {
+        "drinking": 0.10830000042915344,
+        "feeding": 0.023399999365210533,
+        "lying": 0.12559999525547028,
+        "rumination": 0.020899999886751175,
+        "standing": 0.7218000292778015
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 09:41:50",
+    "type": "vision_video",
+    "filename": "sample_cattle_video.mp4",
+    "predicted_class": "drinking",
+    "confidence": 0.9603,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.9603,
+      "probabilities": {
+        "drinking": 0.2353,
+        "feeding": 0.2192,
+        "lying": 0.2848,
+        "rumination": 0.1331,
+        "standing": 0.1276
+      },
+      "activity_breakdown": {
+        "drinking": 20.0,
+        "feeding": 20.0,
+        "lying": 20.0,
+        "rumination": 20.0,
+        "standing": 20.0
+      },
+      "dominant_frequency_percent": 20.0,
+      "total_frames_analyzed": 5,
+      "transitions_count": 4,
+      "transitions": [
+        {
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "from_class": "standing",
+          "to_class": "feeding"
+        },
+        {
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "from_class": "feeding",
+          "to_class": "lying"
+        },
+        {
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "from_class": "lying",
+          "to_class": "rumination"
+        },
+        {
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "from_class": "rumination",
+          "to_class": "drinking"
+        }
+      ],
+      "timeline": [
+        {
+          "frame_index": 0,
+          "timestamp_seconds": 0.0,
+          "timestamp_formatted": "00:00.0",
+          "class": "standing",
+          "confidence": 0.5480999946594238,
+          "probabilities": {
+            "drinking": 0.15729999542236328,
+            "feeding": 0.04919999837875366,
+            "lying": 0.19949999451637268,
+            "rumination": 0.045899998396635056,
+            "standing": 0.5480999946594238
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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avoPyoA5LafQ0bT6Gut2r6D8qNq+g/KgDktrehpK61lG08DpXJv94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBV+8PrXWKy7R8w6VyVLuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA6xmXafmHSuTb7x+tG4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="
+        },
+        {
+          "frame_index": 20,
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "class": "feeding",
+          "confidence": 0.9668999910354614,
+          "probabilities": {
+            "drinking": 0.012000000104308128,
+            "feeding": 0.9668999910354614,
+            "lying": 0.005100000184029341,
+            "rumination": 0.009800000116229057,
+            "standing": 0.006000000052154064
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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HSuUb7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR09a5Knbj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdPWuUf7x+tG4+p/Om0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 40,
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "class": "lying",
+          "confidence": 0.9122999906539917,
+          "probabilities": {
+            "drinking": 0.00930000003427267,
+            "feeding": 0.019600000232458115,
+            "lying": 0.9122999906539917,
+            "rumination": 0.03550000116229057,
+            "standing": 0.02329999953508377
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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VG1vQ/lXW7V9B+VG1fQflQByW1vQ/lRtb0P5V1u1fQflRtX0H5UAckVb+6aSutZRtPArlH+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rq1Zdo5HSuSp24+poA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z"
+        },
+        {
+          "frame_index": 60,
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "class": "rumination",
+          "confidence": 0.5597000122070312,
+          "probabilities": {
+            "drinking": 0.03779999911785126,
+            "feeding": 0.05380000174045563,
+            "lying": 0.3037000000476837,
+            "rumination": 0.5597000122070312,
+            "standing": 0.04500000178813934
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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RQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/wB4/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR0rkqduPqaAOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 80,
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "class": "drinking",
+          "confidence": 0.9603000283241272,
+          "probabilities": {
+            "drinking": 0.9603000283241272,
+            "feeding": 0.006399999838322401,
+            "lying": 0.0034000000450760126,
+            "rumination": 0.014399999752640724,
+            "standing": 0.01549999974668026
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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J94fWutX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5J/vH611rfdP0rkn+8frQAlFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA5PvD611asu1eR0rkqXcfU0AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdYzLtbkdK5R/vH60m4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+        }
+      ],
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "summary": "Video Analysis (5.0s, 5 frames sampled): Dominant behavior is 'drinking' (20.0% of observed video). Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "video_metadata": {
+        "video_path": "C:\\Users\\sampa\\AppData\\Local\\Temp\\tmp081o46pr.mp4",
+        "filename": "tmp081o46pr.mp4",
+        "total_frames": 100,
+        "fps": 20.0,
+        "width": 640,
+        "height": 480,
+        "duration_seconds": 5.0,
+        "sampled_frames": 5,
+        "sample_stride": 20
+      },
+      "model": "ResNet18 (Video Temporal Frame Aggregation)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 09:41:50",
+    "type": "vision",
+    "filename": "sample_standing.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.7218000292778015,
+    "details": {
+      "class": "standing",
+      "confidence": 0.7218000292778015,
+      "probabilities": {
+        "drinking": 0.10830000042915344,
+        "feeding": 0.023399999365210533,
+        "lying": 0.12559999525547028,
+        "rumination": 0.020899999886751175,
+        "standing": 0.7218000292778015
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 09:33:00",
+    "type": "vision_video",
+    "filename": "sample_cattle_video.mp4",
+    "predicted_class": "drinking",
+    "confidence": 0.9603,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.9603,
+      "probabilities": {
+        "drinking": 0.2353,
+        "feeding": 0.2192,
+        "lying": 0.2848,
+        "rumination": 0.1331,
+        "standing": 0.1276
+      },
+      "activity_breakdown": {
+        "drinking": 20.0,
+        "feeding": 20.0,
+        "lying": 20.0,
+        "rumination": 20.0,
+        "standing": 20.0
+      },
+      "dominant_frequency_percent": 20.0,
+      "total_frames_analyzed": 5,
+      "transitions_count": 4,
+      "transitions": [
+        {
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "from_class": "standing",
+          "to_class": "feeding"
+        },
+        {
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "from_class": "feeding",
+          "to_class": "lying"
+        },
+        {
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "from_class": "lying",
+          "to_class": "rumination"
+        },
+        {
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "from_class": "rumination",
+          "to_class": "drinking"
+        }
+      ],
+      "timeline": [
+        {
+          "frame_index": 0,
+          "timestamp_seconds": 0.0,
+          "timestamp_formatted": "00:00.0",
+          "class": "standing",
+          "confidence": 0.5480999946594238,
+          "probabilities": {
+            "drinking": 0.15729999542236328,
+            "feeding": 0.04919999837875366,
+            "lying": 0.19949999451637268,
+            "rumination": 0.045899998396635056,
+            "standing": 0.5480999946594238
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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avoPyoA5LafQ0bT6Gut2r6D8qNq+g/KgDktrehpK61lG08DpXJv94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBV+8PrXWKy7R8w6VyVLuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA6xmXafmHSuTb7x+tG4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="
+        },
+        {
+          "frame_index": 20,
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "class": "feeding",
+          "confidence": 0.9668999910354614,
+          "probabilities": {
+            "drinking": 0.012000000104308128,
+            "feeding": 0.9668999910354614,
+            "lying": 0.005100000184029341,
+            "rumination": 0.009800000116229057,
+            "standing": 0.006000000052154064
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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HSuUb7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR09a5Knbj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdPWuUf7x+tG4+p/Om0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 40,
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "class": "lying",
+          "confidence": 0.9122999906539917,
+          "probabilities": {
+            "drinking": 0.00930000003427267,
+            "feeding": 0.019600000232458115,
+            "lying": 0.9122999906539917,
+            "rumination": 0.03550000116229057,
+            "standing": 0.02329999953508377
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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VG1vQ/lXW7V9B+VG1fQflQByW1vQ/lRtb0P5V1u1fQflRtX0H5UAckVb+6aSutZRtPArlH+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rq1Zdo5HSuSp24+poA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z"
+        },
+        {
+          "frame_index": 60,
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "class": "rumination",
+          "confidence": 0.5597000122070312,
+          "probabilities": {
+            "drinking": 0.03779999911785126,
+            "feeding": 0.05380000174045563,
+            "lying": 0.3037000000476837,
+            "rumination": 0.5597000122070312,
+            "standing": 0.04500000178813934
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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RQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/wB4/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR0rkqduPqaAOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 80,
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "class": "drinking",
+          "confidence": 0.9603000283241272,
+          "probabilities": {
+            "drinking": 0.9603000283241272,
+            "feeding": 0.006399999838322401,
+            "lying": 0.0034000000450760126,
+            "rumination": 0.014399999752640724,
+            "standing": 0.01549999974668026
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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J94fWutX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5J/vH611rfdP0rkn+8frQAlFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA5PvD611asu1eR0rkqXcfU0AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdYzLtbkdK5R/vH60m4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+        }
+      ],
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "summary": "Video Analysis (5.0s, 5 frames sampled): Dominant behavior is 'drinking' (20.0% of observed video). Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "video_metadata": {
+        "video_path": "C:\\Users\\sampa\\AppData\\Local\\Temp\\tmpkxssnu3b.mp4",
+        "filename": "tmpkxssnu3b.mp4",
+        "total_frames": 100,
+        "fps": 20.0,
+        "width": 640,
+        "height": 480,
+        "duration_seconds": 5.0,
+        "sampled_frames": 5,
+        "sample_stride": 20
+      },
+      "model": "ResNet18 (Video Temporal Frame Aggregation)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 09:32:59",
+    "type": "vision",
+    "filename": "sample_standing.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.7218000292778015,
+    "details": {
+      "class": "standing",
+      "confidence": 0.7218000292778015,
+      "probabilities": {
+        "drinking": 0.10830000042915344,
+        "feeding": 0.023399999365210533,
+        "lying": 0.12559999525547028,
+        "rumination": 0.020899999886751175,
+        "standing": 0.7218000292778015
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 09:32:18",
+    "type": "vision_video",
+    "filename": "sample_cattle_video.mp4",
+    "predicted_class": "drinking",
+    "confidence": 0.9603,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.9603,
+      "probabilities": {
+        "drinking": 0.2353,
+        "feeding": 0.2192,
+        "lying": 0.2848,
+        "rumination": 0.1331,
+        "standing": 0.1276
+      },
+      "activity_breakdown": {
+        "drinking": 20.0,
+        "feeding": 20.0,
+        "lying": 20.0,
+        "rumination": 20.0,
+        "standing": 20.0
+      },
+      "dominant_frequency_percent": 20.0,
+      "total_frames_analyzed": 5,
+      "transitions_count": 4,
+      "transitions": [
+        {
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "from_class": "standing",
+          "to_class": "feeding"
+        },
+        {
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "from_class": "feeding",
+          "to_class": "lying"
+        },
+        {
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "from_class": "lying",
+          "to_class": "rumination"
+        },
+        {
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "from_class": "rumination",
+          "to_class": "drinking"
+        }
+      ],
+      "timeline": [
+        {
+          "frame_index": 0,
+          "timestamp_seconds": 0.0,
+          "timestamp_formatted": "00:00.0",
+          "class": "standing",
+          "confidence": 0.5480999946594238,
+          "probabilities": {
+            "drinking": 0.15729999542236328,
+            "feeding": 0.04919999837875366,
+            "lying": 0.19949999451637268,
+            "rumination": 0.045899998396635056,
+            "standing": 0.5480999946594238
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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avoPyoA5LafQ0bT6Gut2r6D8qNq+g/KgDktrehpK61lG08DpXJv94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU+8PrXWr90VySfeH1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf7x+tda33TXJP94/WgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBV+8PrXWKy7R8w6VyVLuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA63cvqPzo3L6j865LcfU0bj6mgDrdy+o/OjcvqPzrktx9TRuPqaAOt3L6j86Ny+o/OuS3H1NG4+poA6xmXafmHSuTb7x+tG4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q=="
+        },
+        {
+          "frame_index": 20,
+          "timestamp_seconds": 1.0,
+          "timestamp_formatted": "00:01.0",
+          "class": "feeding",
+          "confidence": 0.9668999910354614,
+          "probabilities": {
+            "drinking": 0.012000000104308128,
+            "feeding": 0.9668999910354614,
+            "lying": 0.005100000184029341,
+            "rumination": 0.009800000116229057,
+            "standing": 0.006000000052154064
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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HSuUb7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuj6VyafeH1rrF+6PpQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN90/SuTf7x+tdY33T9K5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7o+lcmn3h9a6xfuj6UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdP0rk3+8frXWN90/SuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6PpXJp94fWusX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5N/vH611jfdP0rk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR09a5Knbj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdPWuUf7x+tG4+p/Om0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 40,
+          "timestamp_seconds": 2.0,
+          "timestamp_formatted": "00:02.0",
+          "class": "lying",
+          "confidence": 0.9122999906539917,
+          "probabilities": {
+            "drinking": 0.00930000003427267,
+            "feeding": 0.019600000232458115,
+            "lying": 0.9122999906539917,
+            "rumination": 0.03550000116229057,
+            "standing": 0.02329999953508377
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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VG1vQ/lXW7V9B+VG1fQflQByW1vQ/lRtb0P5V1u1fQflRtX0H5UAckVb+6aSutZRtPArlH+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBU++v1rrV+6K5JPvr9a61fuigBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEb7prkn++31rrW+6a5J/vt9aAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFT76/WutX7orkk++v1rrV+6KAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooARvumuSf77fWutb7prkn++31oASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAVPvr9a61fuiuST76/WutX7ooAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBG+6a5J/vt9a61vumuSf77fWgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rq1Zdo5HSuSp24+poA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOs3D1o3D1rk9x9T+dG4+p/OgDrNw9aNw9a5PcfU/nRuPqfzoA6zcPWjcPWuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z"
+        },
+        {
+          "frame_index": 60,
+          "timestamp_seconds": 3.0,
+          "timestamp_formatted": "00:03.0",
+          "class": "rumination",
+          "confidence": 0.5597000122070312,
+          "probabilities": {
+            "drinking": 0.03779999911785126,
+            "feeding": 0.05380000174045563,
+            "lying": 0.3037000000476837,
+            "rumination": 0.5597000122070312,
+            "standing": 0.04500000178813934
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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RQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/wB4/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6xfuiuTT7w+tdYv3RQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACN901yb/eP1rrG+6a5N/vH60ANooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHJ94fWusX7ork0+8PrXWL90UALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAjfdNcm/3j9a6xvumuTf7x+tADaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigByfeH1rrF+6K5NPvD611i/dFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33TXJv94/Wusb7prk3+8frQA2iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAcn3h9a6tWXaOR0rkqduPqaAOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOs3L6j86Ny+o/OuT3H1P50bj6n86AOrZl2nkdK5R/vH60bj6mm0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH/9k="
+        },
+        {
+          "frame_index": 80,
+          "timestamp_seconds": 4.0,
+          "timestamp_formatted": "00:04.0",
+          "class": "drinking",
+          "confidence": 0.9603000283241272,
+          "probabilities": {
+            "drinking": 0.9603000283241272,
+            "feeding": 0.006399999838322401,
+            "lying": 0.0034000000450760126,
+            "rumination": 0.014399999752640724,
+            "standing": 0.01549999974668026
+          },
+          "thumbnail_base64": "data:image/jpeg;base64,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J94fWutX7o+lAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAI33T9K5J/vH611rfdP0rkn+8frQAlFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA5PvD611asu1eR0rkqXcfU0AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdbuX1H50bl9R+dcluPqfzo3H1P50AdYzLtbkdK5R/vH60m4+ppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+        }
+      ],
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "summary": "Video Analysis (5.0s, 5 frames sampled): Dominant behavior is 'drinking' (20.0% of observed video). Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "video_metadata": {
+        "video_path": "C:\\Users\\sampa\\AppData\\Local\\Temp\\tmps9ubsrnj.mp4",
+        "filename": "tmps9ubsrnj.mp4",
+        "total_frames": 100,
+        "fps": 20.0,
+        "width": 640,
+        "height": 480,
+        "duration_seconds": 5.0,
+        "sampled_frames": 5,
+        "sample_stride": 20
+      },
+      "model": "ResNet18 (Video Temporal Frame Aggregation)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-16 09:32:18",
+    "type": "vision",
+    "filename": "sample_standing.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.7218000292778015,
+    "details": {
+      "class": "standing",
+      "confidence": 0.7218000292778015,
+      "probabilities": {
+        "drinking": 0.10830000042915344,
+        "feeding": 0.023399999365210533,
+        "lying": 0.12559999525547028,
+        "rumination": 0.020899999886751175,
+        "standing": 0.7218000292778015
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:10:30",
+    "type": "audio",
+    "filename": "cow_sound_1789490428.wav",
+    "predicted_class": "Unknown",
+    "confidence": 0.0,
+    "details": {
+      "is_cattle_call": false,
+      "is_human_speech": true,
+      "signal_classification": "Human Speech / Voice",
+      "error": "Human speech / voice detected (80% speech probability). MooTrack is designed exclusively for cattle vocalizations (mooing). Please record a bovine call.",
+      "speech_confidence": 79.7,
+      "cattle_confidence": 0.1,
+      "audio_metrics": {
+        "duration_sec": 1.28,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0169,
+        "spectral_centroid_hz": 1876.3,
+        "spectral_rolloff_hz": 3974.1,
+        "zero_crossing_rate": 0.1645,
+        "f0_pitch_hz": 443.1,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:38",
+    "type": "audio",
+    "filename": "cow_sound_1789490374.wav",
+    "predicted_class": "Unknown",
+    "confidence": 0.0,
+    "details": {
+      "is_cattle_call": false,
+      "is_human_speech": true,
+      "signal_classification": "Human Speech / Voice",
+      "error": "Human speech / voice detected (87% speech probability). MooTrack is designed exclusively for cattle vocalizations (mooing). Please record a bovine call.",
+      "speech_confidence": 87.5,
+      "cattle_confidence": 0.1,
+      "audio_metrics": {
+        "duration_sec": 3.41,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.031,
+        "spectral_centroid_hz": 1785.7,
+        "spectral_rolloff_hz": 3513.5,
+        "zero_crossing_rate": 0.1641,
+        "f0_pitch_hz": 472.6,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:23",
+    "type": "audio",
+    "filename": "cow_sound_1789490359.wav",
+    "predicted_class": "Unknown",
+    "confidence": 0.0,
+    "details": {
+      "is_cattle_call": false,
+      "is_human_speech": true,
+      "signal_classification": "Human Speech / Voice",
+      "error": "Human speech / voice detected (87% speech probability). MooTrack is designed exclusively for cattle vocalizations (mooing). Please record a bovine call.",
+      "speech_confidence": 87.5,
+      "cattle_confidence": 0.1,
+      "audio_metrics": {
+        "duration_sec": 3.41,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.031,
+        "spectral_centroid_hz": 1785.7,
+        "spectral_rolloff_hz": 3513.5,
+        "zero_crossing_rate": 0.1641,
+        "f0_pitch_hz": 472.6,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:09",
+    "type": "vision",
+    "filename": "cow_photo_1789490349.jpg",
+    "predicted_class": "rumination",
+    "confidence": 0.6682999730110168,
+    "details": {
+      "class": "rumination",
+      "confidence": 0.6682999730110168,
+      "probabilities": {
+        "drinking": 0.03449999913573265,
+        "feeding": 0.030500000342726707,
+        "lying": 0.21699999272823334,
+        "rumination": 0.6682999730110168,
+        "standing": 0.04969999939203262
+      },
+      "description": "Cattle is chewing regurgitated cud (chewing rhythm). Primary indicator of digestive health, microbial fermentation, and welfare comfort.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:09",
+    "type": "vision",
+    "filename": "cow_photo_1789490349.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.7218000292778015,
+    "details": {
+      "class": "standing",
+      "confidence": 0.7218000292778015,
+      "probabilities": {
+        "drinking": 0.10830000042915344,
+        "feeding": 0.023399999365210533,
+        "lying": 0.12559999525547028,
+        "rumination": 0.020899999886751175,
+        "standing": 0.7218000292778015
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:09",
+    "type": "vision",
+    "filename": "cow_photo_1789490349.jpg",
+    "predicted_class": "lying",
+    "confidence": 0.9369999766349792,
+    "details": {
+      "class": "lying",
+      "confidence": 0.9369999766349792,
+      "probabilities": {
+        "drinking": 0.007400000002235174,
+        "feeding": 0.010499999858438969,
+        "lying": 0.9369999766349792,
+        "rumination": 0.02410000003874302,
+        "standing": 0.0210999995470047
+      },
+      "description": "Cattle is resting in sternal or lateral recumbency. Critical for rumination, hoof health, and overall dairy herd welfare (typically 10-14 hours/day).",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:09",
+    "type": "vision",
+    "filename": "cow_photo_1789490349.jpg",
+    "predicted_class": "drinking",
+    "confidence": 0.9710999727249146,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.9710999727249146,
+      "probabilities": {
+        "drinking": 0.9710999727249146,
+        "feeding": 0.003599999938160181,
+        "lying": 0.003599999938160181,
+        "rumination": 0.010300000198185444,
+        "standing": 0.01140000019222498
+      },
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:09",
+    "type": "vision",
+    "filename": "cow_photo_1789490349.jpg",
+    "predicted_class": "feeding",
+    "confidence": 0.9724000096321106,
+    "details": {
+      "class": "feeding",
+      "confidence": 0.9724000096321106,
+      "probabilities": {
+        "drinking": 0.012000000104308128,
+        "feeding": 0.9724000096321106,
+        "lying": 0.002899999963119626,
+        "rumination": 0.007600000128149986,
+        "standing": 0.005100000184029341
+      },
+      "description": "Cattle is actively consuming forage, silage, or concentrate from the feed bunk or pasture. Key indicator of dry matter intake and metabolic health.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:09",
+    "type": "audio",
+    "filename": "cow_sound_1789490347.wav",
+    "predicted_class": "Unknown",
+    "confidence": 0.0,
+    "details": {
+      "is_cattle_call": false,
+      "is_human_speech": false,
+      "signal_classification": "Silent / Low Energy",
+      "error": "Insufficient acoustic energy: Audio recording appears nearly silent. Please record closer to the sound source.",
+      "speech_confidence": 1.3,
+      "cattle_confidence": 0.1,
+      "audio_metrics": {
+        "duration_sec": 2.0,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.002,
+        "spectral_centroid_hz": 3993.8,
+        "spectral_rolloff_hz": 6787.2,
+        "zero_crossing_rate": 0.4905,
+        "f0_pitch_hz": 478.7,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:07",
+    "type": "audio",
+    "filename": "cow_sound_1789490340.wav",
+    "predicted_class": "Positive",
+    "confidence": 0.5127999782562256,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.5127999782562256,
+      "probabilities": {
+        "Negative": 0.487199991941452,
+        "Positive": 0.5127999782562256
+      },
+      "speech_confidence": 0.1,
+      "cattle_confidence": 99.3,
+      "audio_metrics": {
+        "duration_sec": 1.56,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0724,
+        "spectral_centroid_hz": 1473.4,
+        "spectral_rolloff_hz": 2993.8,
+        "zero_crossing_rate": 0.0767,
+        "f0_pitch_hz": 392.4,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:09:00",
+    "type": "audio",
+    "filename": "cow_sound_1789490333.wav",
+    "predicted_class": "Positive",
+    "confidence": 0.7402999997138977,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.7402999997138977,
+      "probabilities": {
+        "Negative": 0.2597000002861023,
+        "Positive": 0.7402999997138977
+      },
+      "speech_confidence": 0.7,
+      "cattle_confidence": 94.1,
+      "audio_metrics": {
+        "duration_sec": 0.79,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0614,
+        "spectral_centroid_hz": 1724.0,
+        "spectral_rolloff_hz": 3572.5,
+        "zero_crossing_rate": 0.116,
+        "f0_pitch_hz": 478.5,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:05:33",
+    "type": "vision",
+    "filename": "camera_cow_1789490133.jpg",
+    "predicted_class": "lying",
+    "confidence": 0.24639999866485596,
+    "details": {
+      "class": "lying",
+      "confidence": 0.24639999866485596,
+      "probabilities": {
+        "drinking": 0.19349999725818634,
+        "feeding": 0.21240000426769257,
+        "lying": 0.24639999866485596,
+        "rumination": 0.10689999908208847,
+        "standing": 0.24079999327659607
+      },
+      "description": "Cattle is resting in sternal or lateral recumbency. Critical for rumination, hoof health, and overall dairy herd welfare (typically 10-14 hours/day).",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:05:31",
+    "type": "vision",
+    "filename": "camera_cow_1789490131.jpg",
+    "predicted_class": "lying",
+    "confidence": 0.30979999899864197,
+    "details": {
+      "class": "lying",
+      "confidence": 0.30979999899864197,
+      "probabilities": {
+        "drinking": 0.12880000472068787,
+        "feeding": 0.2551000118255615,
+        "lying": 0.30979999899864197,
+        "rumination": 0.10300000011920929,
+        "standing": 0.20329999923706055
+      },
+      "description": "Cattle is resting in sternal or lateral recumbency. Critical for rumination, hoof health, and overall dairy herd welfare (typically 10-14 hours/day).",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:05:29",
+    "type": "vision",
+    "filename": "camera_cow_1789490129.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.25119999051094055,
+    "details": {
+      "class": "standing",
+      "confidence": 0.25119999051094055,
+      "probabilities": {
+        "drinking": 0.17190000414848328,
+        "feeding": 0.21389999985694885,
+        "lying": 0.2387000024318695,
+        "rumination": 0.1242000013589859,
+        "standing": 0.25119999051094055
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:05:28",
+    "type": "vision",
+    "filename": "camera_cow_1789490127.jpg",
+    "predicted_class": "standing",
+    "confidence": 0.5138999819755554,
+    "details": {
+      "class": "standing",
+      "confidence": 0.5138999819755554,
+      "probabilities": {
+        "drinking": 0.22509999573230743,
+        "feeding": 0.0697999969124794,
+        "lying": 0.11400000005960464,
+        "rumination": 0.07720000296831131,
+        "standing": 0.5138999819755554
+      },
+      "description": "Cattle is upright in an alert, resting, or socializing posture. Standard baseline posture observed throughout daylight hours.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:04:53",
+    "type": "audio",
+    "filename": "audio_1789490091.wav",
+    "predicted_class": "Unknown",
+    "confidence": 0.0,
+    "details": {
+      "is_cattle_call": false,
+      "is_human_speech": false,
+      "signal_classification": "Silent / Low Energy",
+      "error": "Insufficient acoustic energy: Audio recording appears nearly silent. Please record closer to the sound source.",
+      "speech_confidence": 1.3,
+      "cattle_confidence": 0.1,
+      "audio_metrics": {
+        "duration_sec": 2.0,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.002,
+        "spectral_centroid_hz": 3993.8,
+        "spectral_rolloff_hz": 6787.2,
+        "zero_crossing_rate": 0.4905,
+        "f0_pitch_hz": 478.7,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:04:51",
+    "type": "audio",
+    "filename": "audio_1789490087.wav",
+    "predicted_class": "Negative",
+    "confidence": 0.5105999708175659,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Negative",
+      "confidence": 0.5105999708175659,
+      "probabilities": {
+        "Negative": 0.5105999708175659,
+        "Positive": 0.4893999993801117
+      },
+      "speech_confidence": 0.1,
+      "cattle_confidence": 99.3,
+      "audio_metrics": {
+        "duration_sec": 1.56,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0724,
+        "spectral_centroid_hz": 1473.4,
+        "spectral_rolloff_hz": 2993.8,
+        "zero_crossing_rate": 0.0767,
+        "f0_pitch_hz": 392.4,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Negative Emotional Valence. In cattle ethology, this acoustic profile is observed during social separation, physical isolation, milking delays, or maternal separation distress."
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:04:47",
+    "type": "audio",
+    "filename": "audio_1789490079.wav",
+    "predicted_class": "Negative",
+    "confidence": 0.6118999719619751,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Negative",
+      "confidence": 0.6118999719619751,
+      "probabilities": {
+        "Negative": 0.6118999719619751,
+        "Positive": 0.3880999982357025
+      },
+      "speech_confidence": 0.7,
+      "cattle_confidence": 94.1,
+      "audio_metrics": {
+        "duration_sec": 0.79,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0614,
+        "spectral_centroid_hz": 1724.0,
+        "spectral_rolloff_hz": 3572.5,
+        "zero_crossing_rate": 0.116,
+        "f0_pitch_hz": 478.5,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Negative Emotional Valence. In cattle ethology, this acoustic profile is observed during social separation, physical isolation, milking delays, or maternal separation distress."
+    }
+  },
+  {
+    "timestamp": "2026-09-15 22:02:56",
+    "type": "audio",
+    "filename": "audio_1789489968.wav",
+    "predicted_class": "Negative",
+    "confidence": 0.6118999719619751,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Negative",
+      "confidence": 0.6118999719619751,
+      "probabilities": {
+        "Negative": 0.6118999719619751,
+        "Positive": 0.3880999982357025
+      },
+      "speech_confidence": 0.7,
+      "cattle_confidence": 94.1,
+      "audio_metrics": {
+        "duration_sec": 0.79,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0614,
+        "spectral_centroid_hz": 1724.0,
+        "spectral_rolloff_hz": 3572.5,
+        "zero_crossing_rate": 0.116,
+        "f0_pitch_hz": 478.5,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Negative Emotional Valence. In cattle ethology, this acoustic profile is observed during social separation, physical isolation, milking delays, or maternal separation distress."
+    }
+  }
+]
