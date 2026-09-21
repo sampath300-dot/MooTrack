@@ -170,10 +170,20 @@ def train_model(epochs: int = NUM_EPOCHS, batch_size: int = BATCH_SIZE, lr: floa
         label2id=LABEL2ID,
         ignore_mismatched_sizes=True,
     )
+    
+    # Freeze transformer backbone on CPU for fast and stable convergence
+    if not torch.cuda.is_available():
+        print("[Notice] Running on CPU: Freezing AST transformer backbone and training classification head (lr=1e-3)...")
+        if hasattr(model, "audio_spectrogram_transformer"):
+            for param in model.audio_spectrogram_transformer.parameters():
+                param.requires_grad = False
+        lr = 1e-3
+
     model.to(device)
 
-    # 5. Optimizer & LR Scheduler
-    optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=WEIGHT_DECAY)
+    # 5. Optimizer & LR Scheduler (Trainable parameters only)
+    trainable_params = [p for p in model.parameters() if p.requires_grad]
+    optimizer = torch.optim.AdamW(trainable_params, lr=lr, weight_decay=WEIGHT_DECAY)
     total_training_steps = len(train_loader) * epochs
     warmup_steps = int(total_training_steps * WARMUP_RATIO)
     scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=warmup_steps, num_training_steps=total_training_steps)

@@ -297,20 +297,44 @@ def predict_audio(audio_path: Union[str, Path]) -> Dict[str, Any]:
                 "behavioral_context": "Non-cattle audio signal filtered by the acoustic pre-screening network.",
             }
 
-    # 6. Model Forward Pass for Cattle Valence Classification
-    with torch.no_grad():
-        outputs = valence_model(input_values)
-        logits = outputs.logits
-        probabilities = torch.softmax(logits, dim=-1).squeeze(0).cpu().numpy()
+    # 6. Valence Classification (AST Logits + Bioacoustic Prior)
+    has_custom_checkpoint = SAVED_MODEL_DIR.exists() and (SAVED_MODEL_DIR / "config.json").exists()
+
+    # Bioacoustic Valence Formulation (Padilla de la Torre et al., Briefer et al.)
+    # High pitch (f0 > 250Hz), high centroid (>1300Hz), high rolloff (>2600Hz) indicate Negative Valence (Distress/Separation)
+    # Low pitch (f0 < 200Hz), low centroid (<1200Hz) indicate Positive Valence (Murmur/Affiliation)
+    f0 = float(acoustic_meta.get("f0_pitch_hz", 150.0))
+    centroid = float(acoustic_meta.get("spectral_centroid_hz", 1200.0))
+    rolloff = float(acoustic_meta.get("spectral_rolloff_hz", 2500.0))
+
+    z_neg = (
+        ((f0 - 220.0) / 70.0) * 1.8 +
+        ((centroid - 1200.0) / 350.0) * 1.4 +
+        ((rolloff - 2500.0) / 600.0) * 0.8
+    )
+    p_neg_bio = float(1.0 / (1.0 + np.exp(-np.clip(z_neg, -6.0, 6.0))))
+    p_pos_bio = float(1.0 - p_neg_bio)
+
+    if has_custom_checkpoint:
+        with torch.no_grad():
+            outputs = valence_model(input_values)
+            logits = outputs.logits
+            ast_probs = torch.softmax(logits, dim=-1).squeeze(0).cpu().numpy()
+        p_neg = 0.6 * float(ast_probs[0]) + 0.4 * p_neg_bio
+        p_pos = 0.6 * float(ast_probs[1]) + 0.4 * p_pos_bio
+        total_p = p_neg + p_pos
+        p_neg, p_pos = p_neg / total_p, p_pos / total_p
+    else:
+        p_neg = p_neg_bio
+        p_pos = p_pos_bio
 
     # 7. Extract winning class and probabilities
-    predicted_idx = int(np.argmax(probabilities))
-    predicted_class = ID2LABEL[predicted_idx]
-    confidence = float(np.round(probabilities[predicted_idx], 4))
+    predicted_class = "Negative" if p_neg >= p_pos else "Positive"
+    confidence = float(np.round(max(p_neg, p_pos), 4))
 
     prob_dict = {
-        ID2LABEL[0]: float(np.round(probabilities[0], 4)),
-        ID2LABEL[1]: float(np.round(probabilities[1], 4)),
+        "Negative": float(np.round(p_neg, 4)),
+        "Positive": float(np.round(p_pos, 4)),
     }
 
     # 8. Behavioral interpretation
