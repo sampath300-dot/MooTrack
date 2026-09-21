@@ -1,5 +1,40 @@
 [
   {
+    "timestamp": "2026-09-21 21:27:53",
+    "type": "audio",
+    "filename": "live_barn_recording.wav",
+    "predicted_class": "Human Speaking",
+    "confidence": 0.88,
+    "details": {
+      "is_cattle_call": false,
+      "is_human_speech": true,
+      "signal_classification": "Human Speaking",
+      "class": "Human Speaking",
+      "detected_speaker": "Human Speaking",
+      "confidence": 0.88,
+      "probabilities": {
+        "Human Speaking": 0.88,
+        "Cattle Vocalization": 0.12
+      },
+      "error": "Human Speaking Detected (82.1% speech probability). MooTrack is designed exclusively for cattle vocalizations (mooing). Please record a bovine call.",
+      "speech_confidence": 88.0,
+      "cattle_confidence": 0.0,
+      "audio_metrics": {
+        "duration_sec": 3.33,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0363,
+        "spectral_centroid_hz": 1953.7,
+        "spectral_rolloff_hz": 4000.1,
+        "zero_crossing_rate": 0.1333,
+        "f0_pitch_hz": 467.8,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "\ud83d\udde3\ufe0f Human Speaking Detected. The AudioSet sound discriminator recognized human voice/speech. MooTrack's acoustic model is exclusively trained for cattle vocalizations (mooing)."
+    }
+  },
+  {
     "timestamp": "2026-09-17 10:33:38",
     "type": "audio",
     "filename": "distress_call.wav",
