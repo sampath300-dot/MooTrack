@@ -69,952 +69,728 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>MooTrack™ — Smart Cattle Health, Mood & Yield Platform</title>
-    <meta name="description" content="MooTrack™: Next-generation AI-powered cattle health, mood, and behavior tracking system for dairy and livestock farmers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooTrack - Livestock Health & Acoustic Intelligence</title>
+    <meta name="description" content="Commercial cattle vocalization and behavioral monitoring platform for dairy and livestock operations.">
     <link rel="icon" type="image/png" href="/static/logo_clean.png">
-    
-    <!-- Google Fonts: Outfit, Plus Jakarta Sans, JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --brand-primary: #0A4D2E;
-            --brand-primary-hover: #073821;
-            --brand-accent: #22C55E;
-            --brand-accent-subtle: #DCFCE7;
-            --brand-lime: #84CC16;
-            --brand-lime-subtle: #ECFCCB;
-            --brand-gold: #F59E0B;
-            --brand-gold-subtle: #FEF3C7;
-            --brand-rose: #EF4444;
-            --brand-rose-subtle: #FEE2E2;
-            --brand-sky: #0284C7;
-            --brand-sky-subtle: #E0F2FE;
+            --bg-base: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-subtle: #f1f5f9;
+            --border-color: #e2e8f0;
+            --border-hover: #cbd5e1;
             
-            --surface-bg: #F8FAF7;
-            --surface-card: #FFFFFF;
-            --surface-card-alt: #F1F5F0;
-            --surface-card-hover: #FAFCF9;
+            --text-main: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
             
-            --text-heading: #0B1910;
-            --text-body: #324438;
-            --text-muted: #576E5E;
-            --text-white: #FFFFFF;
+            --primary: #166534;
+            --primary-hover: #14532d;
+            --primary-light: #f0fdf4;
+            --primary-border: #bbf7d0;
             
-            --border: #E0EADE;
-            --border-hover: #B5CEB2;
-            --border-focus: #22C55E;
+            --accent: #0284c7;
+            --accent-light: #f0f9ff;
             
-            --shadow-subtle: 0 4px 14px rgba(10, 77, 46, 0.04);
-            --shadow-card: 0 12px 36px rgba(10, 77, 46, 0.07);
-            --shadow-glow-green: 0 0 24px rgba(34, 197, 94, 0.22);
-            --shadow-glow-rose: 0 0 24px rgba(239, 68, 68, 0.22);
+            --warning: #b45309;
+            --warning-light: #fffbeb;
+            --warning-border: #fde68a;
             
-            --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
+            --danger: #b91c1c;
+            --danger-light: #fef2f2;
+            --danger-border: #fecaca;
             
-            --radius-sm: 10px;
-            --radius-md: 18px;
-            --radius-lg: 26px;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body {
-            width: 100%;
-            height: 100%;
-            background-color: var(--surface-bg);
-            color: var(--text-body);
-            font-family: var(--font-sans);
-            line-height: 1.55;
+        
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Full Screen Fluid Container */
-        .app-wrapper {
-            width: 100%;
-            min-height: 100vh;
-            padding: 20px 32px 80px;
-            max-width: 1540px;
+        .container {
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 24px;
         }
 
-        /* Top Header Navbar */
-        .top-navbar {
+        /* Header */
+        .app-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #FFFFFF;
-            border: 1px solid var(--border);
-            padding: 14px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
-            box-shadow: var(--shadow-subtle);
+            padding: 16px 24px;
             margin-bottom: 24px;
-            flex-wrap: wrap;
-            gap: 14px;
         }
-        .nav-brand-group {
+        .header-brand {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 16px;
         }
-        .brand-logo-box {
-            width: 44px;
-            height: 44px;
-            background: var(--brand-accent-subtle);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
+        .brand-logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-sm);
+            object-fit: contain;
         }
-        .brand-name-wrap h1 {
-            font-family: var(--font-display);
-            font-size: 1.45rem;
-            font-weight: 900;
-            color: var(--text-heading);
-            letter-spacing: -0.01em;
-            line-height: 1.2;
-        }
-        .brand-name-wrap p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-        .nav-status-group {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .status-pill {
-            background: var(--brand-accent-subtle);
-            color: var(--brand-primary);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 0.82rem;
+        .brand-title {
+            font-size: 1.25rem;
             font-weight: 700;
-            display: inline-flex;
+            color: var(--text-main);
+            letter-spacing: -0.01em;
+        }
+        .brand-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
+        .system-status {
+            display: flex;
             align-items: center;
             gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--primary-light);
+            border: 1px solid var(--primary-border);
+            padding: 6px 14px;
+            border-radius: 20px;
         }
         .status-dot {
             width: 8px;
             height: 8px;
-            background: var(--brand-accent);
+            background-color: #22c55e;
             border-radius: 50%;
-            box-shadow: 0 0 8px var(--brand-accent);
         }
 
-        /* Hero Banner with Value Proposition */
-        .hero-banner-card {
-            background: linear-gradient(135deg, #072B1A 0%, #0A4D2E 50%, #10663F 100%);
-            color: var(--text-white);
-            padding: 36px 40px;
-            border-radius: var(--radius-lg);
-            box-shadow: 0 16px 44px rgba(7, 43, 26, 0.18);
-            margin-bottom: 26px;
-            position: relative;
-            overflow: hidden;
+        /* Overview Banner */
+        .overview-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 24px;
         }
-        .hero-banner-card::after {
-            content: '';
-            position: absolute;
-            top: -40%;
-            right: -10%;
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(132, 204, 22, 0.18) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
         }
-        .hero-badge {
+        .overview-metric {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+        }
+        .metric-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        .metric-val {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 4px;
+        }
+        .metric-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* Tab Navigation */
+        .nav-tabs {
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+        .tab-btn {
+            background: transparent;
+            border: none;
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.82rem;
-            font-weight: 800;
-            color: #A3E635;
-            margin-bottom: 12px;
-            backdrop-filter: blur(8px);
+            transition: all 0.15s ease;
         }
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 900;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            margin-bottom: 10px;
+        .tab-btn:hover {
+            color: var(--text-main);
         }
-        .hero-title span {
-            color: #A3E635;
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
         }
-        .hero-subtitle {
-            font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 820px;
-            line-height: 1.55;
-            margin-bottom: 24px;
-        }
-
-        /* 4 Key Social Proof & Metric Cards */
-        .hero-stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 14px;
-        }
-        .hero-stat-card {
-            background: rgba(255, 255, 255, 0.10);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: var(--radius-md);
-            padding: 14px 18px;
-            backdrop-filter: blur(6px);
-        }
-        .hero-stat-number {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .hero-stat-label {
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.82);
-            margin-top: 2px;
-            font-weight: 500;
-        }
-
-        /* Full Screen Grid Layout for Tabs */
-        .tab-nav-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 14px;
-            margin-bottom: 26px;
-        }
-        .nav-tab-item {
-            background: #FFFFFF;
-            border: 2px solid var(--border);
-            padding: 18px 20px;
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            text-align: left;
-            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            position: relative;
-        }
-        .nav-tab-item:hover {
-            border-color: var(--brand-primary);
-            background: var(--surface-card-hover);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-card);
-        }
-        .nav-tab-item.active {
-            border-color: var(--brand-primary);
-            background: #FFFFFF;
-            box-shadow: 0 8px 26px rgba(10, 77, 46, 0.12);
-        }
-        .nav-tab-item.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 20px;
-            right: 20px;
-            height: 3px;
-            background: var(--brand-primary);
-            border-radius: 3px 3px 0 0;
-        }
-        .tab-icon-badge {
-            font-size: 1.85rem;
-            width: 50px;
-            height: 50px;
-            background: var(--surface-card-alt);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .nav-tab-item.active .tab-icon-badge {
-            background: var(--brand-accent-subtle);
-            color: var(--brand-primary);
-        }
-        .tab-title-text {
-            font-family: var(--font-display);
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: var(--text-heading);
-            line-height: 1.2;
-        }
-        .tab-subtitle-text {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        /* Workspace Sections */
-        .workspace-panel {
+        .tab-panel {
             display: none;
-            animation: fadeInPanel 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .workspace-panel.active {
+        .tab-panel.active {
             display: block;
         }
-        @keyframes fadeInPanel {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
 
-        /* Full Width Main Card */
-        .main-card {
-            background: var(--surface-card);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            padding: 32px 36px;
-            box-shadow: var(--shadow-card);
-            margin-bottom: 26px;
-        }
-        .card-top-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        /* Main Workspace Card */
+        .workspace-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
             margin-bottom: 24px;
-            flex-wrap: wrap;
-            gap: 14px;
         }
-        .card-main-heading {
-            font-family: var(--font-display);
-            font-size: 1.45rem;
-            font-weight: 800;
-            color: var(--text-heading);
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .section-header {
+            margin-bottom: 20px;
         }
-        .card-subtext {
-            font-size: 0.92rem;
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+        .section-subtitle {
+            font-size: 0.88rem;
             color: var(--text-muted);
-            margin-top: 3px;
+            margin-top: 2px;
         }
 
-        /* Action Tiles Grid */
-        .action-tiles-grid {
+        /* Action Grid */
+        .action-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 18px;
+            gap: 16px;
             margin-bottom: 24px;
         }
-        .action-tile {
-            border: 2px dashed var(--border-hover);
-            background: var(--surface-card-alt);
-            border-radius: var(--radius-md);
-            padding: 26px 22px;
+        .action-box {
+            border: 1px dashed var(--border-hover);
+            background: var(--bg-subtle);
+            border-radius: var(--radius-sm);
+            padding: 24px 20px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.15s ease;
         }
-        .action-tile:hover {
-            border-color: var(--brand-primary);
-            background: #F0FDF4;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-card);
+        .action-box:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
         }
-        .action-tile.recording-active {
-            border-color: var(--brand-rose);
-            background: var(--brand-rose-subtle);
-            animation: pulseGlow 1.5s infinite;
+        .action-box.recording {
+            border-color: var(--danger);
+            background: var(--danger-light);
         }
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-            70% { box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        .action-box-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 8px;
         }
-        .action-tile-icon {
-            font-size: 2.6rem;
-            margin-bottom: 10px;
-        }
-        .action-tile-title {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--text-heading);
-        }
-        .action-tile-sub {
-            font-size: 0.85rem;
+        .action-box-desc {
+            font-size: 0.8rem;
             color: var(--text-muted);
             margin-top: 4px;
         }
 
-        /* Audio Playback Box (Listen after recording) */
-        .audio-playback-box {
+        /* In-Browser Audio Player Bar */
+        .audio-playback-bar {
             display: none;
-            background: var(--surface-card-alt);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 16px 20px;
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
             margin-bottom: 20px;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
         }
-        .audio-playback-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 0.92rem;
-            color: var(--text-heading);
+        .playback-info {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-main);
         }
-        .audio-player-elem {
-            height: 38px;
+        .playback-track {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.82rem;
+            color: var(--primary);
+        }
+        audio {
+            height: 36px;
             outline: none;
         }
 
-        /* Sample Moos / Voices Grid with Listen & Analyze */
-        .sample-moo-grid {
+        /* Soundboard / Sample Grid */
+        .sample-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 14px;
             margin-top: 14px;
         }
-        .sample-moo-card {
-            background: #FFFFFF;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 16px 18px;
+        .sample-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            transition: all 0.18s ease;
             gap: 12px;
         }
-        .sample-moo-card:hover {
-            border-color: var(--brand-primary);
-            box-shadow: var(--shadow-subtle);
-            transform: translateY(-1px);
+        .sample-meta h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
         }
-        .sample-moo-title {
-            font-weight: 800;
-            font-size: 0.95rem;
-            color: var(--text-heading);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .sample-moo-desc {
+        .sample-meta p {
             font-size: 0.78rem;
             color: var(--text-muted);
             margin-top: 2px;
         }
-        .sample-btn-group {
+        .btn-group {
             display: flex;
-            align-items: center;
-            gap: 6px;
+            gap: 8px;
             flex-shrink: 0;
         }
-        .btn-listen {
-            background: var(--surface-card-alt);
-            border: 1px solid var(--border);
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 0.82rem;
-            font-weight: 700;
+        .btn-secondary {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 7px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.15s ease;
         }
-        .btn-listen:hover {
-            background: var(--brand-accent-subtle);
-            color: var(--brand-primary);
+        .btn-secondary:hover {
+            background: var(--border-color);
         }
-        .btn-analyze {
-            background: var(--brand-primary);
-            color: #FFFFFF;
-            border: none;
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 0.82rem;
-            font-weight: 700;
+        .btn-primary {
+            background: var(--primary);
+            border: 1px solid var(--primary);
+            color: #ffffff;
+            padding: 7px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.15s ease;
         }
-        .btn-analyze:hover {
-            background: var(--brand-primary-hover);
+        .btn-primary:hover {
+            background: var(--primary-hover);
         }
 
-        /* Barn Picture Samples Grid with Live Image Thumbnails */
-        .sample-photo-grid {
+        /* Photo Gallery */
+        .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 14px;
             margin-top: 14px;
         }
-        .sample-photo-card {
-            background: #FFFFFF;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
+        .gallery-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
             overflow: hidden;
             cursor: pointer;
-            transition: all 0.2s ease;
-            text-align: center;
+            transition: all 0.15s ease;
         }
-        .sample-photo-card:hover {
-            border-color: var(--brand-primary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-card);
+        .gallery-card:hover {
+            border-color: var(--primary);
         }
-        .sample-photo-img-wrap {
+        .gallery-img-box {
             width: 100%;
             height: 120px;
-            background: #E2E8F0;
+            background: var(--border-color);
             overflow: hidden;
-            position: relative;
         }
-        .sample-photo-img-wrap img {
+        .gallery-img-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .sample-photo-caption {
-            padding: 10px;
-            font-weight: 800;
-            font-size: 0.88rem;
-            color: var(--text-heading);
+        .gallery-caption {
+            padding: 8px 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+            text-align: center;
         }
 
-        /* Result Container */
-        .result-container-card {
+        /* Results Display */
+        .result-card {
             display: none;
-            margin-top: 26px;
-            padding: 28px;
-            border-radius: var(--radius-lg);
-            border: 2px solid transparent;
-            animation: popInCard 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            margin-top: 24px;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
         }
-        @keyframes popInCard {
-            from { opacity: 0; transform: scale(0.98); }
-            to { opacity: 1; transform: scale(1); }
+        .result-card.positive {
+            border-color: var(--primary-border);
+            background: var(--primary-light);
         }
-        .result-container-card.positive {
-            background: #F0FDF4;
-            border-color: #86EFAC;
-            box-shadow: var(--shadow-glow-green);
+        .result-card.negative {
+            border-color: var(--danger-border);
+            background: var(--danger-light);
         }
-        .result-container-card.negative {
-            background: #FFF1F2;
-            border-color: #FDA4AF;
-            box-shadow: var(--shadow-glow-rose);
+        .result-card.warning {
+            border-color: var(--warning-border);
+            background: var(--warning-light);
         }
-        .result-container-card.speech {
-            background: #FEFCE8;
-            border-color: #FDE047;
-        }
-        .result-container-card.behavior {
-            background: #F8FAFC;
-            border-color: #CBD5E1;
-        }
-
-        .result-heading-row {
+        
+        .result-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             flex-wrap: wrap;
-            gap: 12px;
-        }
-        .result-badge-title {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            font-weight: 900;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .result-confidence-pill {
-            font-size: 0.9rem;
-            font-weight: 800;
-            padding: 6px 16px;
-            border-radius: 30px;
-            background: #FFFFFF;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .farmer-advice-box {
-            background: #FFFFFF;
-            border-radius: var(--radius-md);
-            padding: 20px 24px;
-            margin-top: 14px;
-            border: 1px solid rgba(0,0,0,0.06);
-        }
-        .farmer-advice-heading {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--text-heading);
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
             gap: 8px;
         }
-        .farmer-advice-p {
-            font-size: 0.95rem;
-            color: var(--text-body);
-            line-height: 1.55;
+        .result-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+        .result-badge {
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+        }
+        .result-body {
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            margin-top: 8px;
+        }
+        .result-body h6 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        .result-body p {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            line-height: 1.5;
         }
 
         /* Camera Box */
-        .camera-box-wrap {
+        .camera-wrapper {
             display: none;
-            margin-bottom: 22px;
-            background: #000000;
-            border-radius: var(--radius-md);
+            background: #0f172a;
+            border-radius: var(--radius-sm);
             overflow: hidden;
-            max-width: 560px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 540px;
+            margin: 0 auto 20px;
+            text-align: center;
         }
-        #cameraStreamVideo {
+        #cameraVideo {
             width: 100%;
             height: auto;
             display: block;
         }
-        .camera-bottom-actions {
-            padding: 14px;
-            background: rgba(0,0,0,0.85);
+        .camera-actions {
+            padding: 12px;
             display: flex;
-            align-items: center;
             justify-content: center;
             gap: 12px;
-        }
-        .btn-camera-snap {
-            background: var(--brand-accent);
-            color: #FFFFFF;
-            border: none;
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-weight: 800;
-            font-size: 0.95rem;
-            cursor: pointer;
-        }
-        .btn-camera-close {
-            background: rgba(255, 255, 255, 0.2);
-            color: #FFFFFF;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 10px 18px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 0.88rem;
-            cursor: pointer;
+            background: #1e293b;
         }
 
-        /* Preview Image Box after Snap or Upload */
-        .image-preview-box {
+        /* Image Preview */
+        .preview-box {
             display: none;
             text-align: center;
             margin-bottom: 20px;
         }
-        .image-preview-box img {
-            max-height: 280px;
-            border-radius: var(--radius-md);
-            border: 2px solid var(--border);
-            box-shadow: var(--shadow-card);
+        .preview-box img {
+            max-height: 260px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
         }
 
-        /* ROI Economics Grid */
-        .roi-cards-grid {
+        /* Knowledge & Guidance Grid */
+        .guidance-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            margin-top: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
         }
-        .roi-card-item {
-            background: #FFFFFF;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-md);
-            padding: 26px;
-            box-shadow: var(--shadow-subtle);
-            transition: all 0.2s ease;
+        .guidance-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 18px;
         }
-        .roi-card-item:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-card);
-            border-color: var(--border-hover);
+        .guidance-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
         }
-        .roi-icon {
-            font-size: 2.2rem;
-            margin-bottom: 12px;
-        }
-        .roi-card-item h4 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--text-heading);
-            margin-bottom: 8px;
-        }
-        .roi-card-item p {
-            font-size: 0.92rem;
-            color: var(--text-muted);
+        .guidance-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
             line-height: 1.5;
         }
 
         /* History Table */
-        .full-history-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
+        .history-table-wrapper {
+            overflow-x: auto;
             margin-top: 14px;
         }
-        .full-history-table th {
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .history-table th {
             text-align: left;
-            padding: 14px 18px;
-            background: var(--surface-card-alt);
-            color: var(--text-muted);
-            font-weight: 700;
-            border-bottom: 1px solid var(--border);
+            padding: 10px 14px;
+            background: var(--bg-subtle);
+            color: var(--text-secondary);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
         }
-        .full-history-table td {
-            padding: 16px 18px;
-            border-bottom: 1px solid var(--border);
+        .history-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
         }
-        .status-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 5px 14px;
-            border-radius: 30px;
-            font-size: 0.82rem;
-            font-weight: 800;
+        .tag-pill {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
-        .status-tag.pos { background: var(--brand-accent-subtle); color: var(--brand-primary); }
-        .status-tag.neg { background: var(--brand-rose-subtle); color: var(--brand-rose); }
-        .status-tag.neu { background: var(--brand-sky-subtle); color: var(--brand-sky); }
-
-        .btn-download-csv {
-            background: var(--brand-primary);
-            color: #FFFFFF;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-family: var(--font-display);
-            font-weight: 800;
-            font-size: 0.92rem;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-download-csv:hover {
-            background: var(--brand-primary-hover);
-        }
+        .tag-pill.pos { background: var(--primary-light); color: var(--primary); }
+        .tag-pill.neg { background: var(--danger-light); color: var(--danger); }
+        .tag-pill.neu { background: var(--accent-light); color: var(--accent); }
 
         /* Footer */
         .app-footer {
             text-align: center;
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-            font-size: 0.86rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.8rem;
             color: var(--text-muted);
+        }
+
+        svg {
+            display: inline-block;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
 
-<div class="app-wrapper">
+<div class="container">
 
-    <!-- Top Navigation Bar -->
-    <header class="top-navbar">
-        <div class="nav-brand-group">
-            <div class="brand-logo-box">🐄</div>
-            <div class="brand-name-wrap">
-                <h1>MooTrack™ Cattle Intelligence</h1>
-                <p>AI-Powered Herd Health, Mood & Lactation Optimizer</p>
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+        <div class="header-brand">
+            """ + (f'<img src="{LOGO_BASE64}" class="brand-logo-img" alt="Logo">' if LOGO_BASE64 else """
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                <path d="M12 6v6l4 2"/>
+            </svg>
+            """) + """
+            <div>
+                <h1 class="brand-title">MooTrack Cattle Intelligence</h1>
+                <p class="brand-subtitle">Bioacoustic Analysis & Herd Behavioral Diagnostics</p>
             </div>
         </div>
-        <div class="nav-status-group">
-            <div class="status-pill">
-                <span class="status-dot"></span>
-                <span>Bioacoustic AST Online</span>
-            </div>
-            <div class="status-pill">
-                <span class="status-dot"></span>
-                <span>ResNet18 Vision Ready</span>
-            </div>
+        <div class="system-status">
+            <span class="status-dot"></span>
+            <span>Models Operational</span>
         </div>
     </header>
 
-    <!-- Full-Width Hero Value Banner -->
-    <section class="hero-banner-card">
-        <div class="hero-badge">
-            <span>🥛 Commercial Dairy & Livestock Intelligence</span>
-        </div>
-        <h2 class="hero-title">Happy Cows. Healthier Herds. <span>Higher Milk Yield.</span></h2>
-        <p class="hero-subtitle">
-            MooTrack translates your cows' vocalizations and barn behaviors into instant health and emotional diagnosis in under 2 seconds — helping farmers eliminate silent distress, prevent mastitis, and maximize daily lactation.
+    <!-- Overview Panel -->
+    <section class="overview-panel">
+        <h2 style="font-size:1.15rem; font-weight:700; color:var(--text-main);">Commercial Dairy & Livestock Monitoring</h2>
+        <p style="font-size:0.88rem; color:var(--text-secondary); margin-top:4px;">
+            Real-time automated screening for cattle vocalization stress and barn physical activity. Non-invasive diagnostics designed to safeguard lactation productivity and herd well-being.
         </p>
 
-        <!-- 4 Metric Proof Points -->
-        <div class="hero-stats-grid">
-            <div class="hero-stat-card">
-                <div class="hero-stat-number">🥛 +15%</div>
-                <div class="hero-stat-label">Higher Daily Milk Yield</div>
+        <div class="overview-grid">
+            <div class="overview-metric">
+                <div class="metric-label">Lactation Protection</div>
+                <div class="metric-val">+15%</div>
+                <div class="metric-desc">Yield maintenance via stress reduction</div>
             </div>
-            <div class="hero-stat-card">
-                <div class="hero-stat-number">🩺 48h Early</div>
-                <div class="hero-stat-label">Distress & Health Warning</div>
+            <div class="overview-metric">
+                <div class="metric-label">Early Clinical Warning</div>
+                <div class="metric-val">48 Hours</div>
+                <div class="metric-desc">Prior to visible milk drop</div>
             </div>
-            <div class="hero-stat-card">
-                <div class="hero-stat-number">🎯 97.8%</div>
-                <div class="hero-stat-label">Verified Diagnostic Accuracy</div>
+            <div class="overview-metric">
+                <div class="metric-label">Acoustic Precision</div>
+                <div class="metric-val">97.8%</div>
+                <div class="metric-desc">Audio Spectrogram Transformer model</div>
             </div>
-            <div class="hero-stat-card">
-                <div class="hero-stat-number">⚡ 100%</div>
-                <div class="hero-stat-label">Non-Invasive (Zero Tags/Pain)</div>
+            <div class="overview-metric">
+                <div class="metric-label">Implementation</div>
+                <div class="metric-val">Zero Tagging</div>
+                <div class="metric-desc">100% contactless mic and camera sensor inputs</div>
             </div>
         </div>
     </section>
 
-    <!-- 4 Main Navigation Tabs -->
-    <nav class="tab-nav-grid">
-        <button class="nav-tab-item active" onclick="switchPanel('audio')">
-            <div class="tab-icon-badge">🎙️</div>
-            <div>
-                <div class="tab-title-text">Cow Voice & Mood</div>
-                <div class="tab-subtitle-text">Happy vs Distressed Moo</div>
-            </div>
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <button class="tab-btn active" onclick="showTab('audio')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="22"></line>
+                <line x1="8" y1="22" x2="16" y2="22"></line>
+            </svg>
+            <span>Acoustic Vocalization</span>
         </button>
 
-        <button class="nav-tab-item" onclick="switchPanel('vision')">
-            <div class="tab-icon-badge">📷</div>
-            <div>
-                <div class="tab-title-text">Barn Camera & Activity</div>
-                <div class="tab-subtitle-text">Cud Chewing, Eating, Rest</div>
-            </div>
+        <button class="tab-btn" onclick="showTab('vision')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <span>Visual Behavior</span>
         </button>
 
-        <button class="nav-tab-item" onclick="switchPanel('roi')">
-            <div class="tab-icon-badge">📈</div>
-            <div>
-                <div class="tab-title-text">Farmer Yield Guide</div>
-                <div class="tab-subtitle-text">How Cow Mood Drives Profit</div>
-            </div>
+        <button class="tab-btn" onclick="showTab('roi')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            <span>Lactation Benchmarks</span>
         </button>
 
-        <button class="nav-tab-item" onclick="switchPanel('history')">
-            <div class="tab-icon-badge">📜</div>
-            <div>
-                <div class="tab-title-text">Herd Health Records</div>
-                <div class="tab-subtitle-text">Past Logs & CSV Export</div>
-            </div>
+        <button class="tab-btn" onclick="showTab('history')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Diagnostic Records</span>
         </button>
     </nav>
 
     <!-- ======================================================= -->
-    <!-- TAB 1: COW VOICE & MOO CHECK -->
+    <!-- TAB 1: ACOUSTIC VOCALIZATION -->
     <!-- ======================================================= -->
-    <section id="panel-audio" class="workspace-panel active">
-        <div class="main-card">
-            <div class="card-top-bar">
-                <div>
-                    <h3 class="card-main-heading">🎙️ Listen to Your Cow's Voice</h3>
-                    <p class="card-subtext">Record live or upload a cow audio file to check emotional state and vocal health.</p>
-                </div>
+    <section id="panel-audio" class="tab-panel active">
+        <div class="workspace-card">
+            <div class="section-header">
+                <h3 class="section-title">Acoustic Cow Vocalization Analysis</h3>
+                <p class="section-subtitle">Record microphone audio or upload a sound sample to evaluate emotional valence and distress cues.</p>
             </div>
 
-            <!-- Action Tiles Grid -->
-            <div class="action-tiles-grid">
-                <div id="audioRecordTile" class="action-tile" onclick="toggleAudioRecording()">
-                    <div class="action-tile-icon" id="recordIcon">🔴</div>
-                    <div class="action-tile-title" id="recordTitle">Tap to Record Cow Moo</div>
-                    <div class="action-tile-sub" id="recordSub">Hold your phone/mic near the cow (2–5 seconds)</div>
+            <!-- Action Grid -->
+            <div class="action-grid">
+                <div id="audioRecordTile" class="action-box" onclick="toggleAudioRecording()">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="22"></line>
+                    </svg>
+                    <div class="action-box-title" id="recordTitle">Record Live Vocalization</div>
+                    <div class="action-box-desc" id="recordSub">Click to start microphone capture (2 to 5 seconds)</div>
                 </div>
 
-                <div class="action-tile" onclick="document.getElementById('audioUploadInput').click()">
-                    <div class="action-tile-icon">📁</div>
-                    <div class="action-tile-title">Upload Cow Audio File</div>
-                    <div class="action-tile-sub">Supports .wav, .mp3, .m4a, .aac from phone</div>
+                <div class="action-box" onclick="document.getElementById('audioUploadInput').click()">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <div class="action-box-title">Upload Audio File</div>
+                    <div class="action-box-desc">Accepts .wav, .mp3, .m4a, or .aac files</div>
                     <input type="file" id="audioUploadInput" accept="audio/*" style="display:none" onchange="handleAudioUpload(this.files[0])">
                 </div>
             </div>
 
-            <!-- In-Browser Audio Player after Recording / Testing -->
-            <div id="audioPlaybackBox" class="audio-playback-box">
-                <div class="audio-playback-info">
-                    <span>🔊 Audio Recorded / Selected:</span>
-                    <span id="audioTrackName" style="font-family:var(--font-mono); color:var(--brand-primary);">live_recording.wav</span>
+            <!-- In-Browser Audio Player -->
+            <div id="audioPlaybackBox" class="audio-playback-bar">
+                <div class="playback-info">
+                    <span>Active Audio: </span>
+                    <span id="audioTrackName" class="playback-track">recording.wav</span>
                 </div>
-                <audio id="audioElement" class="audio-player-elem" controls></audio>
+                <audio id="audioElement" controls></audio>
             </div>
 
-            <!-- Pre-recorded Sample Voices with Direct Listen & Instant AI Test -->
-            <div style="margin-top:20px;">
-                <h4 style="font-family:var(--font-display); font-size:1.05rem; font-weight:800; color:var(--text-heading); margin-bottom:10px;">
-                    ⚡ Test Pre-Recorded Cow Voices (Listen & Analyze):
-                </h4>
-                <div class="sample-moo-grid">
-                    <!-- Sample 1 -->
-                    <div class="sample-moo-card">
-                        <div>
-                            <div class="sample-moo-title">🟢 Gentle Contact Moo</div>
-                            <div class="sample-moo-desc">Low-frequency closed-mouth maternal murmur (135 Hz)</div>
+            <!-- Pre-recorded Test Samples -->
+            <div style="margin-top:24px;">
+                <h4 style="font-size:0.95rem; font-weight:700; color:var(--text-main); margin-bottom:8px;">Standard Calibration Recordings</h4>
+                <div class="sample-grid">
+                    <div class="sample-item">
+                        <div class="sample-meta">
+                            <h5>Calm Contact Murmur</h5>
+                            <p>Low-frequency maternal contact vocalization (135 Hz)</p>
                         </div>
-                        <div class="sample-btn-group">
-                            <button class="btn-listen" onclick="playSampleAudio('cattle_positive_sample.wav', 'Gentle Contact Moo')">▶️ Listen</button>
-                            <button class="btn-analyze" onclick="testAudioSample('cattle_positive_sample.wav', 'Gentle Contact Moo')">⚡ Analyze</button>
+                        <div class="btn-group">
+                            <button class="btn-secondary" onclick="playSampleAudio('cattle_positive_sample.wav', 'Calm Contact Murmur')">Play</button>
+                            <button class="btn-primary" onclick="testAudioSample('cattle_positive_sample.wav', 'Calm Contact Murmur')">Analyze</button>
                         </div>
                     </div>
 
-                    <!-- Sample 2 -->
-                    <div class="sample-moo-card">
-                        <div>
-                            <div class="sample-moo-title">🔴 Urgent Distress Call</div>
-                            <div class="sample-moo-desc">High-frequency open-mouth separation call (420 Hz)</div>
+                    <div class="sample-item">
+                        <div class="sample-meta">
+                            <h5>High-Distress Call</h5>
+                            <p>Open-mouth high-pitch separation distress (420 Hz)</p>
                         </div>
-                        <div class="sample-btn-group">
-                            <button class="btn-listen" onclick="playSampleAudio('cattle_negative_sample.wav', 'Urgent Distress Call')">▶️ Listen</button>
-                            <button class="btn-analyze" onclick="testAudioSample('cattle_negative_sample.wav', 'Urgent Distress Call')">⚡ Analyze</button>
+                        <div class="btn-group">
+                            <button class="btn-secondary" onclick="playSampleAudio('cattle_negative_sample.wav', 'High-Distress Call')">Play</button>
+                            <button class="btn-primary" onclick="testAudioSample('cattle_negative_sample.wav', 'High-Distress Call')">Analyze</button>
                         </div>
                     </div>
 
-                    <!-- Sample 3 -->
-                    <div class="sample-moo-card">
-                        <div>
-                            <div class="sample-moo-title">🗣️ Human Speaking Voice</div>
-                            <div class="sample-moo-desc">Tests AudioSet speech filter & human rejection</div>
+                    <div class="sample-item">
+                        <div class="sample-meta">
+                            <h5>Human Speech Test</h5>
+                            <p>Validates AudioSet acoustic discriminator rejection</p>
                         </div>
-                        <div class="sample-btn-group">
-                            <button class="btn-listen" onclick="playSampleAudio('human_speech_sample.wav', 'Human Speaking Voice')">▶️ Listen</button>
-                            <button class="btn-analyze" onclick="testAudioSample('human_speech_sample.wav', 'Human Speaking Voice')">⚡ Analyze</button>
+                        <div class="btn-group">
+                            <button class="btn-secondary" onclick="playSampleAudio('human_speech_sample.wav', 'Human Speech Test')">Play</button>
+                            <button class="btn-primary" onclick="testAudioSample('human_speech_sample.wav', 'Human Speech Test')">Analyze</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Result Display Card -->
-            <div id="audioResultCard" class="result-container-card">
-                <div class="result-heading-row">
-                    <div class="result-badge-title" id="audioResultTitle">
-                        <span id="audioResultIcon">🟢</span>
-                        <span id="audioResultHeading">Cow is Calm & Happy</span>
-                    </div>
-                    <div class="result-confidence-pill" id="audioCertaintyPill">97% Certainty</div>
+            <!-- Result Card -->
+            <div id="audioResultCard" class="result-card">
+                <div class="result-header">
+                    <div class="result-title" id="audioResultHeading">Calm & Content State</div>
+                    <div class="result-badge" id="audioCertaintyPill">97.0% Confidence</div>
                 </div>
-
-                <div class="farmer-advice-box">
-                    <div class="farmer-advice-heading">💡 Farmer Action & Lactation Impact:</div>
-                    <p class="farmer-advice-p" id="audioGuidanceText">
-                        Calm, low contact moo detected. Your cow is feeling comfortable and relaxed with her herdmates. A calm emotional state maximizes udder blood circulation, supporting peak daily milk yield!
+                <div class="result-body">
+                    <h6>Clinical Assessment & Guidance</h6>
+                    <p id="audioGuidanceText">
+                        Acoustic parameters indicate positive emotional valence and stable physiological condition.
                     </p>
                 </div>
             </div>
@@ -1022,94 +798,93 @@ DASHBOARD_HTML = """<!DOCTYPE html>
     </section>
 
     <!-- ======================================================= -->
-    <!-- TAB 2: BARN CAMERA & COW ACTIVITY -->
+    <!-- TAB 2: VISUAL BEHAVIOR SCANNER -->
     <!-- ======================================================= -->
-    <section id="panel-vision" class="workspace-panel">
-        <div class="main-card">
-            <div class="card-top-bar">
-                <div>
-                    <h3 class="card-main-heading">📷 Barn Camera & Cow Activity Scanner</h3>
-                    <p class="card-subtext">Capture live camera photos or test real barn cow images to track rumination, eating, drinking, and resting.</p>
-                </div>
+    <section id="panel-vision" class="tab-panel">
+        <div class="workspace-card">
+            <div class="section-header">
+                <h3 class="section-title">Visual Barn Activity Scanner</h3>
+                <p class="section-subtitle">Process live camera frames or upload images/videos to classify rumination, feeding, resting, and standing postures.</p>
             </div>
 
-            <!-- Camera Viewfinder -->
-            <div id="cameraBoxWrap" class="camera-box-wrap">
-                <video id="cameraStreamVideo" autoplay playsinline></video>
-                <div class="camera-bottom-actions">
-                    <button class="btn-camera-snap" onclick="snapCameraPhoto()">📸 Snap Photo</button>
-                    <button class="btn-camera-close" onclick="closeCamera()">✖ Close Camera</button>
+            <!-- Camera Wrapper -->
+            <div id="cameraBoxWrap" class="camera-wrapper">
+                <video id="cameraVideo" autoplay playsinline></video>
+                <div class="camera-actions">
+                    <button class="btn-primary" onclick="snapCameraPhoto()">Capture Frame</button>
+                    <button class="btn-secondary" onclick="closeCamera()">Close Camera</button>
                 </div>
             </div>
 
             <!-- Image Preview Box -->
-            <div id="imagePreviewBox" class="image-preview-box">
-                <img id="imagePreviewElem" src="" alt="Cow Preview">
+            <div id="imagePreviewBox" class="preview-box">
+                <img id="imagePreviewElem" src="" alt="Frame Preview">
             </div>
 
-            <!-- Action Tiles -->
-            <div class="action-tiles-grid">
-                <div class="action-tile" onclick="openCamera()">
-                    <div class="action-tile-icon">📸</div>
-                    <div class="action-tile-title">Open Barn Live Camera</div>
-                    <div class="action-tile-sub">Take an instant live picture with your device camera</div>
+            <!-- Action Grid -->
+            <div class="action-grid">
+                <div class="action-box" onclick="openCamera()">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <div class="action-box-title">Access Camera Feed</div>
+                    <div class="action-box-desc">Take a snapshot using device camera</div>
                 </div>
 
-                <div class="action-tile" onclick="document.getElementById('visionUploadInput').click()">
-                    <div class="action-tile-icon">📁</div>
-                    <div class="action-tile-title">Upload Cow Picture or Video</div>
-                    <div class="action-tile-sub">Supports .jpg, .png photos and .mp4 videos</div>
+                <div class="action-box" onclick="document.getElementById('visionUploadInput').click()">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <div class="action-box-title">Upload Image or Video</div>
+                    <div class="action-box-desc">Accepts .jpg, .png, and .mp4 video files</div>
                     <input type="file" id="visionUploadInput" accept="image/*,video/*" style="display:none" onchange="handleVisionUpload(this.files[0])">
                 </div>
             </div>
 
-            <!-- Barn Cow Picture Gallery (Visual Previews) -->
-            <div style="margin-top:20px;">
-                <h4 style="font-family:var(--font-display); font-size:1.05rem; font-weight:800; color:var(--text-heading); margin-bottom:10px;">
-                    ⚡ Try Real Barn Cow Pictures (Click to Preview & Analyze):
-                </h4>
-                <div class="sample-photo-grid">
-                    <div class="sample-photo-card" onclick="testVisionSample('sample_rumination.jpg', 'Chewing Cud')">
-                        <div class="sample-photo-img-wrap"><img src="/samples/image/sample_rumination.jpg" alt="Chewing Cud"></div>
-                        <div class="sample-photo-caption">🌾 Chewing Cud</div>
+            <!-- Barn Photo Samples -->
+            <div style="margin-top:24px;">
+                <h4 style="font-size:0.95rem; font-weight:700; color:var(--text-main); margin-bottom:8px;">Standard Barn Activity Samples</h4>
+                <div class="gallery-grid">
+                    <div class="gallery-card" onclick="testVisionSample('sample_rumination.jpg', 'Rumination / Cud Chewing')">
+                        <div class="gallery-img-box"><img src="/samples/image/sample_rumination.jpg" alt="Rumination"></div>
+                        <div class="gallery-caption">Rumination</div>
                     </div>
 
-                    <div class="sample-photo-card" onclick="testVisionSample('sample_drinking.jpg', 'Drinking Water')">
-                        <div class="sample-photo-img-wrap"><img src="/samples/image/sample_drinking.jpg" alt="Drinking Water"></div>
-                        <div class="sample-photo-caption">💧 Drinking Water</div>
+                    <div class="gallery-card" onclick="testVisionSample('sample_drinking.jpg', 'Drinking Water')">
+                        <div class="gallery-img-box"><img src="/samples/image/sample_drinking.jpg" alt="Drinking"></div>
+                        <div class="gallery-caption">Drinking</div>
                     </div>
 
-                    <div class="sample-photo-card" onclick="testVisionSample('sample_feeding.jpg', 'Feeding / Eating')">
-                        <div class="sample-photo-img-wrap"><img src="/samples/image/sample_feeding.jpg" alt="Feeding"></div>
-                        <div class="sample-photo-caption">🌿 Eating / Feed</div>
+                    <div class="gallery-card" onclick="testVisionSample('sample_feeding.jpg', 'Feeding / Eating')">
+                        <div class="gallery-img-box"><img src="/samples/image/sample_feeding.jpg" alt="Feeding"></div>
+                        <div class="gallery-caption">Feeding</div>
                     </div>
 
-                    <div class="sample-photo-card" onclick="testVisionSample('sample_lying.jpg', 'Resting / Lying')">
-                        <div class="sample-photo-img-wrap"><img src="/samples/image/sample_lying.jpg" alt="Resting"></div>
-                        <div class="sample-photo-caption">🛌 Resting / Lying</div>
+                    <div class="gallery-card" onclick="testVisionSample('sample_lying.jpg', 'Lying / Resting')">
+                        <div class="gallery-img-box"><img src="/samples/image/sample_lying.jpg" alt="Lying"></div>
+                        <div class="gallery-caption">Lying Down</div>
                     </div>
 
-                    <div class="sample-photo-card" onclick="testVisionSample('sample_standing.jpg', 'Standing Alert')">
-                        <div class="sample-photo-img-wrap"><img src="/samples/image/sample_standing.jpg" alt="Standing"></div>
-                        <div class="sample-photo-caption">🚶 Standing Alert</div>
+                    <div class="gallery-card" onclick="testVisionSample('sample_standing.jpg', 'Standing Alert')">
+                        <div class="gallery-img-box"><img src="/samples/image/sample_standing.jpg" alt="Standing"></div>
+                        <div class="gallery-caption">Standing</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Vision Result Display Card -->
-            <div id="visionResultCard" class="result-container-card behavior">
-                <div class="result-heading-row">
-                    <div class="result-badge-title" id="visionResultTitle">
-                        <span id="visionResultIcon">🌾</span>
-                        <span id="visionResultHeading">Chewing Cud (Rumination)</span>
-                    </div>
-                    <div class="result-confidence-pill" id="visionCertaintyPill">97% Certainty</div>
+            <!-- Vision Result Card -->
+            <div id="visionResultCard" class="result-card">
+                <div class="result-header">
+                    <div class="result-title" id="visionResultHeading">Chewing Cud (Rumination)</div>
+                    <div class="result-badge" id="visionCertaintyPill">97.1% Confidence</div>
                 </div>
-
-                <div class="farmer-advice-box">
-                    <div class="farmer-advice-heading">💡 What this means for your herd:</div>
-                    <p class="farmer-advice-p" id="visionGuidanceText">
-                        Active cud chewing confirmed. Excellent rumen microbial fermentation and digestive comfort! Healthy rumination is directly correlated with high butterfat content.
+                <div class="result-body">
+                    <h6>Behavioral Analysis</h6>
+                    <p id="visionGuidanceText">
+                        Active rumination indicates sound digestive physiology and microbial fermentation.
                     </p>
                 </div>
             </div>
@@ -1117,69 +892,64 @@ DASHBOARD_HTML = """<!DOCTYPE html>
     </section>
 
     <!-- ======================================================= -->
-    <!-- TAB 3: FARMER YIELD & ROI GUIDE -->
+    <!-- TAB 3: LACTATION BENCHMARKS -->
     <!-- ======================================================= -->
-    <section id="panel-roi" class="workspace-panel">
-        <div class="main-card">
-            <div class="card-top-bar">
-                <div>
-                    <h3 class="card-main-heading">📈 How Cow Mood & Rest Directly Drive Farm Profits</h3>
-                    <p class="card-subtext">Biological and economic benchmarks every commercial dairy farmer should know.</p>
-                </div>
+    <section id="panel-roi" class="tab-panel">
+        <div class="workspace-card">
+            <div class="section-header">
+                <h3 class="section-title">Physiological & Lactation Productivity Benchmarks</h3>
+                <p class="section-subtitle">Reference metrics linking behavioral observation to dairy herd yield and welfare.</p>
             </div>
 
-            <div class="roi-cards-grid">
-                <div class="roi-card-item">
-                    <div class="roi-icon">🛌</div>
-                    <h4>1. Stall Rest = More Milk (+1.2 kg / Hr)</h4>
-                    <p>When cows lie down, blood flow to the mammary gland increases by <strong>+30% to +50%</strong>. Every additional hour of comfortable rest increases daily milk yield by ~1.2 kg per cow.</p>
+            <div class="guidance-grid">
+                <div class="guidance-card">
+                    <h4>1. Resting Time & Mammary Blood Flow</h4>
+                    <p>Dairy cattle require 10 to 14 hours of daily stall rest. Blood perfusion through the mammary gland increases by up to 50% during recumbency, correlating with approximately +1.2 kg of daily milk yield per additional hour of rest.</p>
                 </div>
 
-                <div class="roi-card-item">
-                    <div class="roi-icon">🌾</div>
-                    <h4>2. Rumination = Higher Butterfat</h4>
-                    <p>Dairy cows must chew cud for <strong>7 to 9 hours daily</strong> (400–600 minutes). High rumination creates natural saliva buffers (sodium bicarbonate), preventing subacute rumen acidosis (SARA).</p>
+                <div class="guidance-card">
+                    <h4>2. Rumination & Butterfat Synthesis</h4>
+                    <p>Standard rumination duration is 400 to 600 minutes daily. Endogenous saliva production provides sodium bicarbonate buffering, preventing subacute rumen acidosis (SARA) and stabilizing milk fat percentages.</p>
                 </div>
 
-                <div class="roi-card-item">
-                    <div class="roi-icon">🔴</div>
-                    <h4>3. Stress = Immediate Yield Loss (-3.5L / Day)</h4>
-                    <p>High-pitched distress calls indicate elevated cortisol and adrenaline, which block oxytocin release and cause milk letdown failure. Catching stress early saves milk yield.</p>
+                <div class="guidance-card">
+                    <h4>3. Acoustic Distress & Cortisol Impact</h4>
+                    <p>Elevated pitch vocalizations correlate with acute cortisol and catecholamine secretion. Hormonal surges inhibit oxytocin-mediated milk letdown, leading to residual milk retention and potential yield declines of 2.0 to 3.5 liters per event.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ======================================================= -->
-    <!-- TAB 4: HERD HEALTH RECORDS & EXPORT -->
+    <!-- TAB 4: DIAGNOSTIC RECORDS -->
     <!-- ======================================================= -->
-    <section id="panel-history" class="workspace-panel">
-        <div class="main-card">
-            <div class="card-top-bar">
+    <section id="panel-history" class="tab-panel">
+        <div class="workspace-card">
+            <div class="section-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
                 <div>
-                    <h3 class="card-main-heading">📜 Herd Health History Log</h3>
-                    <p class="card-subtext">Chronological record of all sound and camera checks with 1-click export.</p>
+                    <h3 class="section-title">Diagnostic Screening Logs</h3>
+                    <p class="section-subtitle">Chronological record of acoustic and visual inference queries.</p>
                 </div>
-                <a href="/api/export/csv" class="btn-download-csv" download="mootrack_cattle_records.csv">
-                    📥 Download CSV Report
+                <a href="/api/export/csv" class="btn-primary" style="text-decoration:none;" download="mootrack_cattle_records.csv">
+                    Export CSV Report
                 </a>
             </div>
 
-            <div style="overflow-x:auto;">
-                <table class="full-history-table">
+            <div class="history-table-wrapper">
+                <table class="history-table">
                     <thead>
                         <tr>
                             <th>Timestamp</th>
-                            <th>Check Modality</th>
+                            <th>Modality</th>
                             <th>Identified State</th>
-                            <th>Certainty</th>
-                            <th>File / Source</th>
+                            <th>Confidence</th>
+                            <th>Source File</th>
                         </tr>
                     </thead>
                     <tbody id="historyTableRows">
                         <tr>
-                            <td colspan="5" style="text-align:center; color:var(--text-muted); padding:24px;">
-                                No checks recorded yet. Record a cow moo or snap a picture to start building your records!
+                            <td colspan="5" style="text-align:center; color:var(--text-muted); padding:20px;">
+                                No records logged yet. Process an audio recording or visual sample to begin logging.
                             </td>
                         </tr>
                     </tbody>
@@ -1190,32 +960,29 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
     <!-- Footer -->
     <footer class="app-footer">
-        <p><strong>MooTrack™ Cattle Intelligence Platform</strong> • AI-Powered Dairy & Livestock Health Optimization</p>
-        <p style="margin-top:4px; font-size:0.8rem;">Non-Invasive Bioacoustic Spectrogram Analysis & Convolutional Computer Vision</p>
+        <p>MooTrack Cattle Intelligence System &bull; Non-invasive Bioacoustic & Computer Vision Diagnostics</p>
     </footer>
 
 </div>
 
 <script>
-    // Tab Navigation
-    function switchPanel(panelKey) {
-        document.querySelectorAll('.nav-tab-item').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.workspace-panel').forEach(sec => sec.classList.remove('active'));
+    // Tab Controller
+    function showTab(tabKey) {
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
 
-        const targetBtn = Array.from(document.querySelectorAll('.nav-tab-item')).find(b => b.getAttribute('onclick').includes(panelKey));
+        const targetBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabKey));
         if (targetBtn) targetBtn.classList.add('active');
 
-        const targetPanel = document.getElementById('panel-' + panelKey);
+        const targetPanel = document.getElementById('panel-' + tabKey);
         if (targetPanel) targetPanel.classList.add('active');
 
-        if (panelKey === 'history') {
+        if (tabKey === 'history') {
             loadHistoryTable();
         }
     }
 
-    // =======================================================
-    // 1. Audio Recording & In-Browser Playback
-    // =======================================================
+    // Audio Capture
     let isAudioRecording = false;
     let audioContext = null;
     let microphoneStream = null;
@@ -1253,21 +1020,20 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             isAudioRecording = true;
             recordSecondsCount = 0;
             const tile = document.getElementById('audioRecordTile');
-            tile.classList.add('recording-active');
-            document.getElementById('recordIcon').innerText = '⏹️';
-            document.getElementById('recordTitle').innerText = 'Recording... (Tap to Finish)';
-            document.getElementById('recordSub').innerText = 'Listening: 0s (Max 10s)';
+            tile.classList.add('recording');
+            document.getElementById('recordTitle').innerText = 'Recording in progress... (Click to Finish)';
+            document.getElementById('recordSub').innerText = 'Elapsed: 0s (Limit 10s)';
 
             recordInterval = setInterval(() => {
                 recordSecondsCount++;
-                document.getElementById('recordSub').innerText = `Listening to cow: ${recordSecondsCount}s (Max 10s)`;
+                document.getElementById('recordSub').innerText = `Elapsed: ${recordSecondsCount}s (Limit 10s)`;
                 if (recordSecondsCount >= 10) {
                     stopAudioRecording();
                 }
             }, 1000);
 
         } catch (err) {
-            alert('Microphone access required: ' + err.message);
+            alert('Microphone initialization error: ' + err.message);
         }
     }
 
@@ -1280,10 +1046,9 @@ DASHBOARD_HTML = """<!DOCTYPE html>
         if (microphoneStream) microphoneStream.getTracks().forEach(t => t.stop());
 
         const tile = document.getElementById('audioRecordTile');
-        tile.classList.remove('recording-active');
-        document.getElementById('recordIcon').innerText = '🔴';
-        document.getElementById('recordTitle').innerText = 'Analyzing Cow Voice...';
-        document.getElementById('recordSub').innerText = 'Running AI acoustic analysis...';
+        tile.classList.remove('recording');
+        document.getElementById('recordTitle').innerText = 'Processing recording...';
+        document.getElementById('recordSub').innerText = 'Running acoustic model...';
 
         const totalLen = pcmChunks.reduce((acc, curr) => acc + curr.length, 0);
         const merged = new Float32Array(totalLen);
@@ -1294,10 +1059,8 @@ DASHBOARD_HTML = """<!DOCTYPE html>
         }
 
         const wavBlob = encodePCMToWAV(merged, 16000);
-        
-        // Load into in-browser audio player so farmer can listen immediately!
-        loadAudioPlayer(wavBlob, "live_recorded_moo.wav");
-        sendAudioToServer(wavBlob, "live_recorded_moo.wav");
+        loadAudioPlayer(wavBlob, "live_recording.wav");
+        sendAudioToServer(wavBlob, "live_recording.wav");
     }
 
     function encodePCMToWAV(samples, sampleRate) {
@@ -1350,7 +1113,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
     function handleAudioUpload(file) {
         if (!file) return;
         loadAudioPlayer(file, file.name);
-        document.getElementById('recordTitle').innerText = 'Analyzing uploaded file...';
+        document.getElementById('recordTitle').innerText = 'Analyzing uploaded sound...';
         sendAudioToServer(file, file.name);
     }
 
@@ -1366,7 +1129,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             const blob = await resp.blob();
             sendAudioToServer(blob, filename);
         } catch (e) {
-            alert('Could not load test audio: ' + e);
+            alert('Unable to load sample audio: ' + e);
         }
     }
 
@@ -1382,64 +1145,58 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             const data = await resp.json();
             renderAudioResult(data);
         } catch (err) {
-            alert("Analysis failed: " + err);
+            alert("Acoustic analysis error: " + err);
         } finally {
-            document.getElementById('recordTitle').innerText = 'Tap to Record Cow Moo';
-            document.getElementById('recordSub').innerText = 'Hold your phone/mic near the cow (2–5 seconds)';
+            document.getElementById('recordTitle').innerText = 'Record Live Vocalization';
+            document.getElementById('recordSub').innerText = 'Click to start microphone capture (2 to 5 seconds)';
         }
     }
 
     function renderAudioResult(data) {
         const card = document.getElementById('audioResultCard');
         card.style.display = 'block';
-        card.className = 'result-container-card';
+        card.className = 'result-card';
 
         const isHuman = data.is_human_speech || data.signal_classification === "Human Speaking";
         const isCattle = data.is_cattle_call && !isHuman;
         const isPos = isCattle && data.class === "Positive";
 
         if (isHuman) {
-            card.classList.add('speech');
-            document.getElementById('audioResultIcon').innerText = '🗣️';
-            document.getElementById('audioResultHeading').innerText = 'Human Voice Detected';
+            card.classList.add('warning');
+            document.getElementById('audioResultHeading').innerText = 'Human Speech Detected (Filtered)';
             document.getElementById('audioCertaintyPill').innerText = `${Math.round((data.confidence||0.9)*100)}% Speech`;
-            document.getElementById('audioGuidanceText').innerText = 'Human speaking was recognized instead of a cow vocalization. Please point your mic towards the cow and record when she vocalizes.';
+            document.getElementById('audioGuidanceText').innerText = 'The system recognized human voice frequencies rather than bovine vocalization. Direct the microphone toward the animal.';
         } else if (isPos) {
             card.classList.add('positive');
-            document.getElementById('audioResultIcon').innerText = '🟢';
-            document.getElementById('audioResultHeading').innerText = 'Cow is Calm & Happy (Positive Mood)';
-            document.getElementById('audioCertaintyPill').innerText = `${Math.round((data.confidence||0.9)*100)}% Certainty`;
-            document.getElementById('audioGuidanceText').innerText = 'Calm, low contact moo detected. Your cow is feeling comfortable, content with her herdmates, or is communicating gently. Her relaxed state supports peak milk synthesis!';
+            document.getElementById('audioResultHeading').innerText = 'Positive Emotional Valence (Calm Murmur)';
+            document.getElementById('audioCertaintyPill').innerText = `${Math.round((data.confidence||0.9)*100)}% Confidence`;
+            document.getElementById('audioGuidanceText').innerText = 'Low-frequency contact vocalization detected. The animal demonstrates stable emotional condition with herd members, supporting optimal lactation blood circulation.';
         } else if (isCattle) {
             card.classList.add('negative');
-            document.getElementById('audioResultIcon').innerText = '🔴';
-            document.getElementById('audioResultHeading').innerText = 'Cow is Distressed / Needs Immediate Attention';
-            document.getElementById('audioCertaintyPill').innerText = `${Math.round((data.confidence||0.9)*100)}% Certainty`;
-            document.getElementById('audioGuidanceText').innerText = '⚠️ Urgent Action Required: High-arousal distress call detected! Prolonged distress elevates cortisol and can reduce daily milk yield by up to 3.5L/day. Check: 1) Empty water trough? 2) Low feed bunk? 3) Cow isolated from herd? 4) In heat (estrus) or experiencing pain?';
+            document.getElementById('audioResultHeading').innerText = 'Negative Emotional Valence (Acoustic Distress Alert)';
+            document.getElementById('audioCertaintyPill').innerText = `${Math.round((data.confidence||0.9)*100)}% Confidence`;
+            document.getElementById('audioGuidanceText').innerText = 'High-frequency open-mouth distress call identified. Investigate barn conditions: check for empty water troughs, feed delivery delays, social isolation, or pain indicators.';
         } else {
-            card.classList.add('speech');
-            document.getElementById('audioResultIcon').innerText = '⚠️';
-            document.getElementById('audioResultHeading').innerText = data.signal_classification || 'Low Energy / Background Sound';
+            card.classList.add('warning');
+            document.getElementById('audioResultHeading').innerText = data.signal_classification || 'Low Acoustic Energy';
             document.getElementById('audioCertaintyPill').innerText = 'Filtered';
-            document.getElementById('audioGuidanceText').innerText = data.error || 'The audio was too quiet or background barn noise. Please record closer to the cow.';
+            document.getElementById('audioGuidanceText').innerText = data.error || 'Signal energy was insufficient to classify. Capture closer to the source.';
         }
     }
 
-    // =======================================================
-    // 2. Camera & Picture Functions
-    // =======================================================
+    // Visual Module
     let cameraMediaStream = null;
 
     async function openCamera() {
         const box = document.getElementById('cameraBoxWrap');
-        const video = document.getElementById('cameraStreamVideo');
+        const video = document.getElementById('cameraVideo');
         box.style.display = 'block';
 
         try {
             cameraMediaStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
             video.srcObject = cameraMediaStream;
         } catch (e) {
-            alert('Could not open camera: ' + e.message);
+            alert('Unable to access camera: ' + e.message);
             box.style.display = 'none';
         }
     }
@@ -1454,7 +1211,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
     }
 
     function snapCameraPhoto() {
-        const video = document.getElementById('cameraStreamVideo');
+        const video = document.getElementById('cameraVideo');
         const canvas = document.createElement('canvas');
         canvas.width = video.videoWidth || 640;
         canvas.height = video.videoHeight || 480;
@@ -1466,7 +1223,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
         showImagePreview(imgUrl);
 
         canvas.toBlob((blob) => {
-            sendVisionToServer(blob, "live_barn_snap.jpg");
+            sendVisionToServer(blob, "camera_capture.jpg");
         }, 'image/jpeg', 0.9);
     }
 
@@ -1490,7 +1247,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             const blob = await resp.blob();
             sendVisionToServer(blob, filename);
         } catch (e) {
-            alert('Could not load sample picture: ' + e);
+            alert('Unable to load sample picture: ' + e);
         }
     }
 
@@ -1506,56 +1263,49 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             const data = await resp.json();
             renderVisionResult(data);
         } catch (err) {
-            alert("Vision analysis failed: " + err);
+            alert("Visual classification error: " + err);
         }
     }
 
     function renderVisionResult(data) {
         const card = document.getElementById('visionResultCard');
         card.style.display = 'block';
+        card.className = 'result-card';
 
         const cls = (data.class || data.dominant_class || "standing").toLowerCase();
         const conf = Math.round((data.confidence || data.dominant_confidence || 0.9) * 100);
 
         const behaviorMap = {
             "drinking": {
-                icon: "💧",
-                title: "Drinking Water",
-                guidance: "Cow is drinking at the water trough. Milk is 87% water — high hydration is essential for dairy cows (target: 60–120L daily). Ensure clean, fresh water flow."
+                title: "Drinking Behavior",
+                guidance: "Animal is ingesting water at drinker/trough. Adequate hydration (60-120 L/day) is essential for metabolic homeokinesis and milk synthesis."
             },
             "feeding": {
-                icon: "🌿",
-                title: "Feeding / Eating Forage",
-                guidance: "Cow is actively eating forage/silage from the feed bunk. Healthy appetite and consistent dry matter intake drive high butterfat and body condition."
+                title: "Feeding Behavior",
+                guidance: "Active forage/TMR consumption. Consistent dry matter intake supports rumen microbial protein synthesis."
             },
             "lying": {
-                icon: "🛌",
-                title: "Resting / Lying Down Comfortably",
-                guidance: "Cow is resting comfortably in the stall. (Dairy cows need 10–14 hours of stall rest daily. Every extra hour of rest increases daily milk yield by ~1.2 kg)."
+                title: "Lying / Resting Posture",
+                guidance: "Recumbent rest observed. Proper stall comfort facilitates mammary blood perfusion and joint relief."
             },
             "rumination": {
-                icon: "🌾",
-                title: "Chewing Cud (Rumination)",
-                guidance: "🌟 Peak Digestive Health: Cow is actively chewing cud. This indicates optimal rumen fermentation, high saliva buffering, and excellent cow comfort."
+                title: "Rumination (Cud Chewing)",
+                guidance: "Active rumination observed. Physiological cud chewing generates essential sodium bicarbonate saliva buffering against rumen acidosis."
             },
             "standing": {
-                icon: "🚶",
-                title: "Standing Alert",
-                guidance: "Cow is upright in a normal alert posture. Standard baseline posture observed throughout daylight hours."
+                title: "Standing Posture",
+                guidance: "Upright alert or idling posture. Normal baseline daylight posture."
             }
         };
 
-        const info = behaviorMap[cls] || { icon: "🐄", title: cls.toUpperCase(), guidance: data.description || "Observed cow behavior." };
+        const info = behaviorMap[cls] || { title: cls.toUpperCase(), guidance: data.description || "Observed posture classification." };
 
-        document.getElementById('visionResultIcon').innerText = info.icon;
         document.getElementById('visionResultHeading').innerText = info.title;
-        document.getElementById('visionCertaintyPill').innerText = `${conf}% Certainty`;
+        document.getElementById('visionCertaintyPill').innerText = `${conf}% Confidence`;
         document.getElementById('visionGuidanceText').innerText = info.guidance;
     }
 
-    // =======================================================
-    // 3. History Table Loader
-    // =======================================================
+    // Historical Records
     async function loadHistoryTable() {
         try {
             const resp = await fetch('/api/history');
@@ -1563,7 +1313,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             const tbody = document.getElementById('historyTableRows');
 
             if (!data || data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:var(--text-muted); padding:24px;">No checks recorded yet. Record a cow moo or snap a picture to start!</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:var(--text-muted); padding:20px;">No records found.</td></tr>';
                 return;
             }
 
@@ -1572,21 +1322,21 @@ DASHBOARD_HTML = """<!DOCTYPE html>
                 const isPos = item.predicted_class === 'Positive';
                 const isNeg = item.predicted_class === 'Negative';
                 const tagClass = isPos ? 'pos' : (isNeg ? 'neg' : 'neu');
-                const tagText = isAudio ? (isPos ? '🟢 Calm / Happy' : (isNeg ? '🔴 Distressed' : item.predicted_class)) : item.predicted_class;
+                const tagText = item.predicted_class;
                 const conf = Math.round((item.confidence || 0) * 100);
 
                 return `
                     <tr>
-                        <td style="font-family:var(--font-mono); font-size:0.84rem;">${item.timestamp}</td>
-                        <td>${isAudio ? '🎙️ Sound / Voice' : '📷 Barn Camera'}</td>
-                        <td><span class="status-tag ${tagClass}">${tagText}</span></td>
-                        <td><strong>${conf}%</strong></td>
-                        <td style="color:var(--text-muted); font-size:0.84rem;">${item.filename || 'Live Check'}</td>
+                        <td style="font-family:ui-monospace, monospace; font-size:0.8rem;">${item.timestamp}</td>
+                        <td>${isAudio ? 'Acoustic' : 'Visual'}</td>
+                        <td><span class="tag-pill ${tagClass}">${tagText}</span></td>
+                        <td>${conf}%</td>
+                        <td style="color:var(--text-muted); font-size:0.8rem;">${item.filename || 'Live Capture'}</td>
                     </tr>
                 `;
             }).join('');
         } catch (e) {
-            console.log('Error loading history:', e);
+            console.error('History load error:', e);
         }
     }
 </script>
@@ -1784,7 +1534,7 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                     "class": "Negative",
                     "confidence": 0.85,
                     "probabilities": {"Positive": 0.15, "Negative": 0.85},
-                    "behavioral_context": "Acoustic features indicate Negative Emotional Valence. Observed during social separation or distress.",
+                    "behavioral_context": "Acoustic parameters indicate negative valence.",
                     "error_note": str(e)
                 }).encode("utf-8"))
                 return

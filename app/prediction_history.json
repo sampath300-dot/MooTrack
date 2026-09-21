@@ -1,5 +1,68 @@
 [
   {
+    "timestamp": "2026-09-21 21:48:59",
+    "type": "vision",
+    "filename": "sample_feeding.jpg",
+    "predicted_class": "feeding",
+    "confidence": 0.9724000096321106,
+    "details": {
+      "class": "feeding",
+      "confidence": 0.9724000096321106,
+      "probabilities": {
+        "drinking": 0.012000000104308128,
+        "feeding": 0.9724000096321106,
+        "lying": 0.002899999963119626,
+        "rumination": 0.007600000128149986,
+        "standing": 0.005100000184029341
+      },
+      "description": "Cattle is actively consuming forage, silage, or concentrate from the feed bunk or pasture. Key indicator of dry matter intake and metabolic health.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-21 21:48:57",
+    "type": "vision",
+    "filename": "sample_drinking.jpg",
+    "predicted_class": "drinking",
+    "confidence": 0.9710999727249146,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.9710999727249146,
+      "probabilities": {
+        "drinking": 0.9710999727249146,
+        "feeding": 0.003599999938160181,
+        "lying": 0.003599999938160181,
+        "rumination": 0.010300000198185444,
+        "standing": 0.01140000019222498
+      },
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-21 21:48:56",
+    "type": "vision",
+    "filename": "sample_rumination.jpg",
+    "predicted_class": "rumination",
+    "confidence": 0.6682999730110168,
+    "details": {
+      "class": "rumination",
+      "confidence": 0.6682999730110168,
+      "probabilities": {
+        "drinking": 0.03449999913573265,
+        "feeding": 0.030500000342726707,
+        "lying": 0.21699999272823334,
+        "rumination": 0.6682999730110168,
+        "standing": 0.04969999939203262
+      },
+      "description": "Cattle is chewing regurgitated cud (chewing rhythm). Primary indicator of digestive health, microbial fermentation, and welfare comfort.",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
     "timestamp": "2026-09-21 21:27:53",
     "type": "audio",
     "filename": "live_barn_recording.wav",
