@@ -1,0 +1,30 @@
+# MooTrack: Deep Learning-Based Multimodal Cattle Monitoring System
+# Core Framework & Neural Networks
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Transformer Models & Hugging Face Audio
+transformers>=4.30.0
+datasets>=2.14.0
+pyarrow>=12.0.0
+
+# Bioacoustic Signal Processing
+librosa>=0.10.0
+soundfile>=0.12.1
+scipy>=1.10.0
+
+# Vision Processing & Video Analysis
+opencv-python-headless>=4.8.0
+pillow>=10.0.0
+
+# Scientific Computing & Metrics
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+
+# Interactive Dashboard Applications
+streamlit>=1.30.0
+altair>=5.0.0

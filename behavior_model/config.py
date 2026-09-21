@@ -37,6 +37,8 @@ TEST_SAMPLES_DIR.mkdir(parents=True, exist_ok=True)
 
 # Standard 5 MooTrack Classes
 BEHAVIOR_CLASSES = ["drinking", "feeding", "lying", "rumination", "standing"]
+CLASS_NAMES = BEHAVIOR_CLASSES
+CONFUSION_MATRIX_PATH = RESULTS_DIR / "confusion_matrices.npy"
 NUM_CLASSES = len(BEHAVIOR_CLASSES)
 
 ID2LABEL = {
