@@ -150,7 +150,7 @@ st.markdown("---")
 # Sidebar
 with st.sidebar:
     if LOGO_PATH.exists():
-        st.image(str(LOGO_PATH), width=150)
+        st.image(str(LOGO_PATH), use_container_width=True)
     st.markdown("### MooTrack Platform")
     st.caption("Commercial Dairy Intelligence & Livestock Health Suite")
     st.markdown("---")
@@ -292,22 +292,29 @@ with tab_vision:
     st.markdown("### Visual Barn Activity Scanner")
     st.write("Process live camera frames or upload images/videos to classify rumination, feeding, resting, and standing postures.")
 
-    v1, v2 = st.columns([1, 1])
+    vision_source = st.radio(
+        "Select Visual Input Source:",
+        ["📁 Upload Image / Video", "📷 Live Camera (Snapshot)", "🖼️ Standard Barn Activity Samples"],
+        horizontal=True,
+    )
 
-    with v1:
-        st.markdown("#### Visual Input")
+    camera_photo = None
+    vision_file = None
+    sample_img_bytes = None
+    sample_img_name = "None"
+
+    if vision_source == "📷 Live Camera (Snapshot)":
+        st.info("Camera active. Capture a snapshot of the cattle when ready.")
         camera_photo = st.camera_input("Capture Live Photo")
+
+    elif vision_source == "📁 Upload Image / Video":
         vision_file = st.file_uploader("Upload Image or Video (.jpg, .png, .mp4)", type=["jpg", "jpeg", "png", "mp4", "mov", "avi"])
 
-    with v2:
-        st.markdown("#### Standard Barn Activity Samples")
+    elif vision_source == "🖼️ Standard Barn Activity Samples":
         sample_choice_img = st.selectbox(
             "Select reference frame:",
             ["None", "Rumination (Cud Chewing)", "Drinking Water", "Feeding / Eating", "Lying / Resting", "Standing Alert"]
         )
-
-        sample_img_bytes = None
-        sample_img_name = "None"
         if sample_choice_img != "None":
             sample_img_map = {
                 "Rumination (Cud Chewing)": "sample_rumination.jpg",
@@ -322,7 +329,7 @@ with tab_vision:
                 with open(p_img, "rb") as f:
                     sample_img_bytes = f.read()
                 sample_img_name = img_fn
-                st.image(str(p_img), caption=sample_choice_img, width=320)
+                st.image(str(p_img), caption=sample_choice_img, width=380)
 
     vision_to_process = None
     v_source_name = "Live Photo"

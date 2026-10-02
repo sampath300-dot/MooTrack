@@ -1,5 +1,94 @@
 [
   {
+    "timestamp": "2026-09-23 09:02:12",
+    "type": "vision",
+    "filename": "sample_drinking.jpg",
+    "predicted_class": "drinking",
+    "confidence": 0.24699999392032623,
+    "details": {
+      "class": "drinking",
+      "confidence": 0.24699999392032623,
+      "probabilities": {
+        "drinking": 0.24699999392032623,
+        "feeding": 0.2151000052690506,
+        "lying": 0.164900004863739,
+        "rumination": 0.179299995303154,
+        "standing": 0.19359999895095825
+      },
+      "description": "Cattle is ingesting water at the trough or drinker. Water intake is vital for thermoregulation and milk yield (typically 60-120L/day).",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
+    "timestamp": "2026-09-22 10:10:17",
+    "type": "audio",
+    "filename": "live_recording.wav",
+    "predicted_class": "Negative",
+    "confidence": 0.9964,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Negative",
+      "confidence": 0.9964,
+      "probabilities": {
+        "Negative": 0.9964,
+        "Positive": 0.0036
+      },
+      "speech_confidence": 1.6,
+      "cattle_confidence": 97.9,
+      "audio_metrics": {
+        "duration_sec": 9.98,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0562,
+        "spectral_centroid_hz": 1330.8,
+        "spectral_rolloff_hz": 2516.1,
+        "zero_crossing_rate": 0.0947,
+        "f0_pitch_hz": 417.9,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "Acoustic features indicate Negative Emotional Valence. In cattle ethology, this acoustic profile is observed during social separation, physical isolation, milking delays, or maternal separation distress."
+    }
+  },
+  {
+    "timestamp": "2026-09-22 10:09:05",
+    "type": "audio",
+    "filename": "live_recording.wav",
+    "predicted_class": "Human Speaking",
+    "confidence": 0.9807,
+    "details": {
+      "is_cattle_call": false,
+      "is_human_speech": true,
+      "signal_classification": "Human Speaking",
+      "class": "Human Speaking",
+      "detected_speaker": "Human Speaking",
+      "confidence": 0.9807,
+      "probabilities": {
+        "Human Speaking": 0.9807,
+        "Cattle Vocalization": 0.0193
+      },
+      "error": "Human Speaking Detected (98.1% speech probability). MooTrack is designed exclusively for cattle vocalizations (mooing). Please record a bovine call.",
+      "speech_confidence": 98.1,
+      "cattle_confidence": 0.0,
+      "audio_metrics": {
+        "duration_sec": 4.1,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.0854,
+        "spectral_centroid_hz": 1213.5,
+        "spectral_rolloff_hz": 2174.8,
+        "zero_crossing_rate": 0.0901,
+        "f0_pitch_hz": 422.0,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "High-Frequency (Open-Mouth) Call",
+        "call_type_description": "Open-mouth vocalization typically associated with high arousal, physical distance, or urgent social communication."
+      },
+      "behavioral_context": "\ud83d\udde3\ufe0f Human Speaking Detected. The AudioSet sound discriminator recognized human voice/speech. MooTrack's acoustic model is exclusively trained for cattle vocalizations (mooing)."
+    }
+  },
+  {
     "timestamp": "2026-09-21 21:48:59",
     "type": "vision",
     "filename": "sample_feeding.jpg",

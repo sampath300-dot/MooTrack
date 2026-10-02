@@ -141,9 +141,9 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             gap: 16px;
         }
         .brand-logo-img {
-            width: 42px;
-            height: 42px;
-            border-radius: var(--radius-sm);
+            height: 38px;
+            width: auto;
+            max-width: 160px;
             object-fit: contain;
         }
         .brand-title {
@@ -968,6 +968,13 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 <script>
     // Tab Controller
     function showTab(tabKey) {
+        if (tabKey !== 'vision') {
+            closeCamera();
+        }
+        if (tabKey !== 'audio') {
+            if (isAudioRecording) stopAudioRecording();
+        }
+
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
 
@@ -981,6 +988,18 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             loadHistoryTable();
         }
     }
+
+    // Auto-release hardware on tab hide / close
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            closeCamera();
+            if (isAudioRecording) stopAudioRecording();
+        }
+    });
+    window.addEventListener('beforeunload', () => {
+        closeCamera();
+        if (isAudioRecording) stopAudioRecording();
+    });
 
     // Audio Capture
     let isAudioRecording = false;
@@ -1203,9 +1222,13 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
     function closeCamera() {
         const box = document.getElementById('cameraBoxWrap');
-        box.style.display = 'none';
+        if (box) box.style.display = 'none';
+        const video = document.getElementById('cameraVideo');
+        if (video) video.srcObject = null;
         if (cameraMediaStream) {
-            cameraMediaStream.getTracks().forEach(t => t.stop());
+            cameraMediaStream.getTracks().forEach(t => {
+                try { t.stop(); } catch(e) {}
+            });
             cameraMediaStream = null;
         }
     }
