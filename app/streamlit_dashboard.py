@@ -1,5 +1,5 @@
 """
-MooTrack - Livestock Health & Acoustic Intelligence Platform
+MooTrack — Livestock Health & Acoustic Intelligence Platform
 Commercial cattle vocalization and behavioral monitoring system.
 """
 
@@ -33,75 +33,209 @@ LOGO_PATH = STATIC_DIR / "logo_clean.png" if (STATIC_DIR / "logo_clean.png").exi
 
 # Page Config: Clean Wide Layout
 st.set_page_config(
-    page_title="MooTrack - Livestock Intelligence",
+    page_title="MooTrack — Precision Cattle Intelligence",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-# Custom Clean Styling (Enterprise Agritech)
+# Custom Editorial Styling (Inspired by zero4genz Minimalist Human-Designed Aesthetic)
 st.markdown("""
 <style>
-    .header-box {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 10px;
-        padding: 20px 24px;
-        margin-bottom: 20px;
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+    
+    html, body, [class*="css"], .stApp {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        background-color: #faf9f5 !important;
+        color: #121310 !important;
     }
-    .header-title {
-        font-size: 1.35rem;
+    
+    /* Top Hero Header */
+    .editorial-hero {
+        padding: 10px 0 24px;
+        border-bottom: 1px solid #e5e3dc;
+        margin-bottom: 28px;
+    }
+    .hero-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
         font-weight: 700;
-        color: #0f172a;
-        letter-spacing: -0.01em;
+        color: #7a7972;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
     }
-    .header-sub {
-        font-size: 0.9rem;
-        color: #64748b;
-        margin-top: 2px;
+    .hero-title {
+        font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+        font-weight: 800;
+        color: #121310;
+        letter-spacing: -0.035em;
+        line-height: 1.15;
+        margin-bottom: 12px;
     }
+    .hero-sub {
+        font-size: 1rem;
+        color: #4a4943;
+        max-width: 800px;
+        line-height: 1.55;
+    }
+    
+    /* Minimal Metric Grid */
+    .metric-card-box {
+        background: #ffffff;
+        border: 1px solid #e5e3dc;
+        padding: 20px 22px;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .metric-card-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #7a7972;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+    }
+    .metric-card-val {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #121310;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+    .metric-card-label {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: #121310;
+        margin-bottom: 2px;
+    }
+    .metric-card-sub {
+        font-size: 0.78rem;
+        color: #7a7972;
+        line-height: 1.35;
+    }
+    
+    /* Result Instrument Readout Cards */
     .result-box-positive {
-        background: #f0fdf4;
-        border: 1px solid #bbf7d0;
-        border-radius: 8px;
-        padding: 18px 20px;
-        margin-top: 14px;
+        background: #ffffff;
+        border: 1px solid #e5e3dc;
+        border-left: 4px solid #1d4624;
+        padding: 24px;
+        margin-top: 20px;
     }
     .result-box-negative {
-        background: #fef2f2;
-        border: 1px solid #fecaca;
-        border-radius: 8px;
-        padding: 18px 20px;
-        margin-top: 14px;
+        background: #ffffff;
+        border: 1px solid #e5e3dc;
+        border-left: 4px solid #991b1b;
+        padding: 24px;
+        margin-top: 20px;
     }
     .result-box-neutral {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 18px 20px;
-        margin-top: 14px;
+        background: #ffffff;
+        border: 1px solid #e5e3dc;
+        border-left: 4px solid #121310;
+        padding: 24px;
+        margin-top: 20px;
     }
     .result-box-warning {
-        background: #fffbeb;
-        border: 1px solid #fde68a;
-        border-radius: 8px;
-        padding: 18px 20px;
-        margin-top: 14px;
+        background: #ffffff;
+        border: 1px solid #e5e3dc;
+        border-left: 4px solid #854d0e;
+        padding: 24px;
+        margin-top: 20px;
+    }
+    .result-tag-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #7a7972;
+        margin-bottom: 4px;
+    }
+    .result-heading-text {
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: #121310;
+        margin-bottom: 12px;
     }
     .advice-content {
-        background: #ffffff;
-        border: 1px solid rgba(0,0,0,0.06);
-        border-radius: 6px;
-        padding: 14px;
-        margin-top: 10px;
-        font-size: 0.9rem;
-        color: #334155;
+        background: #f3f1ea;
+        border: 1px solid #e5e3dc;
+        padding: 16px;
+        margin-top: 12px;
+        font-size: 0.92rem;
+        color: #4a4943;
+        line-height: 1.6;
     }
+    
+    /* Benchmark Guidance Card */
     .guidance-metric-card {
         background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 18px;
-        margin-bottom: 12px;
+        border: 1px solid #e5e3dc;
+        padding: 26px;
+        margin-bottom: 18px;
+    }
+    .guidance-index {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #1d4624;
+        margin-bottom: 8px;
+    }
+    .guidance-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #121310;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+    }
+    .guidance-body {
+        font-size: 0.9rem;
+        color: #4a4943;
+        line-height: 1.6;
+    }
+
+    /* Primary Buttons & Form Controls */
+    div.stButton > button:first-child {
+        background-color: #121310 !important;
+        color: #ffffff !important;
+        border: 1px solid #121310 !important;
+        border-radius: 0px !important;
+        font-weight: 700 !important;
+        font-size: 0.88rem !important;
+        padding: 10px 24px !important;
+        letter-spacing: -0.01em !important;
+        transition: all 0.15s ease !important;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #1d4624 !important;
+        border-color: #1d4624 !important;
+        color: #ffffff !important;
+    }
+    
+    /* Clean Tab Bar */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 0px;
+        border-bottom: 1px solid #e5e3dc;
+    }
+    .stTabs [data-baseweb="tab"] {
+        padding: 14px 22px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 0.92rem;
+        color: #7a7972;
+        border-radius: 0px;
+        border-bottom: 2px solid transparent;
+    }
+    .stTabs [aria-selected="true"] {
+        color: #121310 !important;
+        font-weight: 800 !important;
+        border-bottom-color: #121310 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -128,24 +262,53 @@ def save_history_entry(entry):
 
 # Header
 st.markdown("""
-<div class="header-box">
-    <div class="header-title">MooTrack Cattle Intelligence System</div>
-    <div class="header-sub">Non-invasive Bioacoustic Spectrogram & Behavioral Computer Vision Screening</div>
+<div class="editorial-hero">
+    <div class="hero-tag">[ 00 / SYSTEM OVERVIEW ]</div>
+    <div class="hero-title">Precision Cattle Health & Acoustic Intelligence</div>
+    <div class="hero-sub">Non-invasive bioacoustic spectrogram screening & behavioral computer vision ethology for commercial dairy operations.</div>
 </div>
 """, unsafe_allow_html=True)
 
-# 4 Key Metrics
+# 4 Key Metrics (Hairline Box Style)
 m1, m2, m3, m4 = st.columns(4)
 with m1:
-    st.metric("Lactation Protection", "+15% Yield Gain", "Stress-reduction support")
+    st.markdown("""
+    <div class="metric-card-box">
+        <div class="metric-card-tag">[ 01 ]</div>
+        <div class="metric-card-val">+15%</div>
+        <div class="metric-card-label">Lactation Protection</div>
+        <div class="metric-card-sub">Yield maintenance via distress reduction</div>
+    </div>
+    """, unsafe_allow_html=True)
 with m2:
-    st.metric("Early Alert", "48 Hours", "Prior to clinical mastitis")
+    st.markdown("""
+    <div class="metric-card-box">
+        <div class="metric-card-tag">[ 02 ]</div>
+        <div class="metric-card-val">48h</div>
+        <div class="metric-card-label">Early Clinical Warning</div>
+        <div class="metric-card-sub">Prior to visible milk drop or fever</div>
+    </div>
+    """, unsafe_allow_html=True)
 with m3:
-    st.metric("Acoustic Precision", "97.8%", "AST transformer architecture")
+    st.markdown("""
+    <div class="metric-card-box">
+        <div class="metric-card-tag">[ 03 ]</div>
+        <div class="metric-card-val">97.8%</div>
+        <div class="metric-card-label">Acoustic Precision</div>
+        <div class="metric-card-sub">Audio Spectrogram Transformer inference</div>
+    </div>
+    """, unsafe_allow_html=True)
 with m4:
-    st.metric("Animal Welfare", "Contactless", "Zero tags or collar hardware")
+    st.markdown("""
+    <div class="metric-card-box">
+        <div class="metric-card-tag">[ 04 ]</div>
+        <div class="metric-card-val">100%</div>
+        <div class="metric-card-label">Contactless Sensing</div>
+        <div class="metric-card-sub">Zero wearable tags or collar hardware</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-st.markdown("---")
+st.markdown("<div style='height:16px;'></div>", unsafe_allow_html=True)
 
 # Sidebar
 with st.sidebar:
@@ -158,13 +321,14 @@ with st.sidebar:
     st.markdown("- [Web Interface (Port 8000)](http://localhost:8000)")
     st.markdown("---")
     st.caption("Version 2.0 &bull; AudioSet AST & ResNet18 Models")
+    st.caption("SAHYADRI AIML &bull; AM722T2A")
 
 # 4 Main Tabs
 tab_audio, tab_vision, tab_roi, tab_history = st.tabs([
-    "Acoustic Vocalization",
-    "Visual Activity",
-    "Lactation Benchmarks",
-    "Diagnostic Records"
+    "[01] Acoustic Vocalization",
+    "[02] Visual Activity",
+    "[03] Lactation Benchmarks",
+    "[04] Diagnostic Records"
 ])
 
 # =======================================================
@@ -172,14 +336,25 @@ tab_audio, tab_vision, tab_roi, tab_history = st.tabs([
 # =======================================================
 with tab_audio:
     st.markdown("### Acoustic Cow Vocalization Analysis")
-    st.write("Record microphone audio or upload a sound sample to evaluate emotional valence and distress cues.")
+    st.caption("Record live microphone audio or upload a sound sample to evaluate emotional valence and distress cues.")
 
     c1, c2 = st.columns([1, 1])
 
     with c1:
-        st.markdown("#### Audio Input")
-        audio_record = st.audio_input("Microphone Recording")
-        audio_file = st.file_uploader("Upload Sound File (.wav, .mp3, .m4a)", type=["wav", "mp3", "m4a", "aac", "ogg"])
+        st.markdown("#### Audio Input Source")
+        audio_mode = st.radio(
+            "Select Audio Input Mode:",
+            ["📁 Upload Sound File", "🎙️ Live Microphone Recording"],
+            horizontal=True,
+            label_visibility="collapsed"
+        )
+        
+        audio_record = None
+        audio_file = None
+        if audio_mode == "🎙️ Live Microphone Recording":
+            audio_record = st.audio_input("Microphone Recording")
+        else:
+            audio_file = st.file_uploader("Upload Sound File (.wav, .mp3, .m4a)", type=["wav", "mp3", "m4a", "aac", "ogg"])
 
     with c2:
         st.markdown("#### Standard Calibration Recordings")
@@ -209,88 +384,94 @@ with tab_audio:
                     sample_audio_bytes = f.read()
                 st.audio(sample_audio_bytes, format="audio/wav")
 
-    # Processing
+    # Staging Audio & Explicit Analysis Trigger
     audio_to_process = None
-    source_name = "Live Check"
+    source_name = "None"
 
     if audio_record is not None:
         audio_to_process = audio_record.read()
         source_name = "Live Microphone Recording"
-        st.markdown("**Recorded Audio:**")
+        st.markdown("**Staged Audio:**")
         st.audio(audio_to_process, format="audio/wav")
     elif audio_file is not None:
         audio_to_process = audio_file.read()
         source_name = audio_file.name
-        st.markdown("**Uploaded Audio:**")
+        st.markdown(f"**Staged File:** `{audio_file.name}`")
         st.audio(audio_to_process, format="audio/wav")
     elif sample_audio_bytes is not None:
         audio_to_process = sample_audio_bytes
         source_name = moo_choice
 
     if audio_to_process is not None:
-        st.markdown("---")
-        with st.spinner("Processing bioacoustic spectrogram..."):
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp:
-                tmp.write(audio_to_process)
-                tmp_path = tmp.name
+        st.markdown("<div style='height:12px;'></div>", unsafe_allow_html=True)
+        btn_analyze_audio = st.button("Analyze Acoustic Signal", type="primary", key="btn_run_audio")
 
-            try:
-                res = predict_audio(tmp_path)
-            finally:
-                if os.path.exists(tmp_path):
-                    os.remove(tmp_path)
+        if btn_analyze_audio:
+            with st.spinner("Processing bioacoustic spectrogram with AST..."):
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp:
+                    tmp.write(audio_to_process)
+                    tmp_path = tmp.name
 
-        is_human = res.get("is_human_speech", False)
-        is_cattle = res.get("is_cattle_call", True) and not is_human
-        pred_class = res.get("class", "Unknown")
-        conf = round(float(res.get("confidence", 0.9)) * 100)
+                try:
+                    res = predict_audio(tmp_path)
+                finally:
+                    if os.path.exists(tmp_path):
+                        os.remove(tmp_path)
 
-        # Save to history
-        save_history_entry({
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "type": "audio",
-            "filename": source_name,
-            "predicted_class": pred_class,
-            "confidence": res.get("confidence", 0.0),
-            "details": res,
-        })
+            is_human = res.get("is_human_speech", False)
+            is_cattle = res.get("is_cattle_call", True) and not is_human
+            pred_class = res.get("class", "Unknown")
+            conf = round(float(res.get("confidence", 0.9)) * 100)
 
-        if is_human:
-            st.markdown(f"""
-            <div class="result-box-warning">
-                <h4 style="color:#b45309; margin-bottom:4px;">Human Speech Detected (Filtered) &bull; {conf}% Speech Confidence</h4>
-                <div class="advice-content">
-                    The acoustic pre-screening discriminator identified human speech rather than bovine vocalization. Direct the microphone toward the animal.
+            # Save to history
+            save_history_entry({
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "type": "audio",
+                "filename": source_name,
+                "predicted_class": pred_class,
+                "confidence": res.get("confidence", 0.0),
+                "details": res,
+            })
+
+            if is_human:
+                st.markdown(f"""
+                <div class="result-box-warning">
+                    <div class="result-tag-label">ACOUSTIC PRE-SCREENING</div>
+                    <div class="result-heading-text">Human Speech Detected (Filtered) &bull; {conf}% Speech Confidence</div>
+                    <div class="advice-content">
+                        The acoustic discriminator identified human voice frequencies rather than bovine vocalization. Direct the microphone toward the animal.
+                    </div>
                 </div>
-            </div>
-            """, unsafe_allow_html=True)
-        elif is_cattle and pred_class == "Positive":
-            st.markdown(f"""
-            <div class="result-box-positive">
-                <h4 style="color:#166534; margin-bottom:4px;">Positive Emotional Valence (Calm Contact Murmur) &bull; {conf}% Confidence</h4>
-                <div class="advice-content">
-                    Low-frequency contact vocalization detected. The animal demonstrates stable emotional condition with herd members, supporting optimal lactation blood circulation.
+                """, unsafe_allow_html=True)
+            elif is_cattle and pred_class == "Positive":
+                st.markdown(f"""
+                <div class="result-box-positive">
+                    <div class="result-tag-label">ACOUSTIC INFERENCE RESULT</div>
+                    <div class="result-heading-text">Positive Emotional Valence (Calm Contact Murmur) &bull; {conf}% Confidence</div>
+                    <div class="advice-content">
+                        Low-frequency contact vocalization detected. The animal demonstrates stable emotional condition with herd members, supporting optimal lactation blood circulation.
+                    </div>
                 </div>
-            </div>
-            """, unsafe_allow_html=True)
-        elif is_cattle and pred_class == "Negative":
-            st.markdown(f"""
-            <div class="result-box-negative">
-                <h4 style="color:#b91c1c; margin-bottom:4px;">Negative Emotional Valence (Acoustic Distress Alert) &bull; {conf}% Confidence</h4>
-                <div class="advice-content">
-                    High-frequency open-mouth distress call identified. Investigate barn conditions: check for empty water troughs, feed delivery delays, social isolation, or pain indicators.
+                """, unsafe_allow_html=True)
+            elif is_cattle and pred_class == "Negative":
+                st.markdown(f"""
+                <div class="result-box-negative">
+                    <div class="result-tag-label">ACOUSTIC INFERENCE RESULT</div>
+                    <div class="result-heading-text">Negative Emotional Valence (Acoustic Distress Alert) &bull; {conf}% Confidence</div>
+                    <div class="advice-content">
+                        High-frequency open-mouth distress call identified. Investigate barn conditions: check for empty water troughs, feed delivery delays, social isolation, or pain indicators.
+                    </div>
                 </div>
-            </div>
-            """, unsafe_allow_html=True)
-        else:
-            st.warning(res.get('error', 'Acoustic signal energy was insufficient for classification.'))
+                """, unsafe_allow_html=True)
+            else:
+                st.warning(res.get('error', 'Acoustic signal energy was insufficient for classification.'))
 
 # =======================================================
 # TAB 2: VISUAL ACTIVITY
 # =======================================================
 with tab_vision:
     st.markdown("### Visual Barn Activity Scanner")
-    st.write("Process live camera frames or upload images/videos to classify rumination, feeding, resting, and standing postures.")
+    st.caption("Process live camera frames or upload images/videos to classify rumination, feeding, resting, and standing postures via ResNet18.")
 
     vision_source = st.radio(
         "Select Visual Input Source:",
@@ -329,8 +510,9 @@ with tab_vision:
                 with open(p_img, "rb") as f:
                     sample_img_bytes = f.read()
                 sample_img_name = img_fn
-                st.image(str(p_img), caption=sample_choice_img, width=380)
+                st.image(str(p_img), caption=f"{sample_choice_img} ({img_fn})", width=420)
 
+    # Staging Visual Media & Explicit Analysis Trigger
     vision_to_process = None
     v_source_name = "Live Photo"
     is_vid = False
@@ -343,84 +525,91 @@ with tab_vision:
         v_source_name = vision_file.name
         is_vid = Path(vision_file.name).suffix.lower() in [".mp4", ".mov", ".avi", ".webm"]
         if not is_vid:
-            st.image(vision_file, caption="Uploaded Image", width=340)
+            st.image(vision_file, caption=f"Staged Image: {vision_file.name}", width=380)
     elif sample_img_bytes is not None:
         vision_to_process = sample_img_bytes
         v_source_name = sample_img_name
 
     if vision_to_process is not None:
-        st.markdown("---")
-        with st.spinner("Processing visual features with ResNet18..."):
-            ext = ".mp4" if is_vid else ".jpg"
-            with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp:
-                tmp.write(vision_to_process)
-                tmp_path = tmp.name
+        st.markdown("<div style='height:12px;'></div>", unsafe_allow_html=True)
+        btn_analyze_vision = st.button("Analyze Behavior Posture", type="primary", key="btn_run_vision")
 
-            try:
-                v_res = predict_behavior(tmp_path)
-            finally:
-                if os.path.exists(tmp_path):
-                    os.remove(tmp_path)
+        if btn_analyze_vision:
+            with st.spinner("Processing visual features with ResNet18..."):
+                ext = ".mp4" if is_vid else ".jpg"
+                with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp:
+                    tmp.write(vision_to_process)
+                    tmp_path = tmp.name
 
-        b_cls = (v_res.get("class") or v_res.get("dominant_class") or "standing").lower()
-        b_conf = round(float(v_res.get("confidence") or v_res.get("dominant_confidence") or 0.9) * 100)
+                try:
+                    v_res = predict_behavior(tmp_path)
+                finally:
+                    if os.path.exists(tmp_path):
+                        os.remove(tmp_path)
 
-        # Save to history
-        save_history_entry({
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "type": "vision_video" if is_vid else "vision",
-            "filename": v_source_name,
-            "predicted_class": b_cls,
-            "confidence": v_res.get("confidence", 0.0),
-            "details": v_res,
-        })
+            b_cls = (v_res.get("class") or v_res.get("dominant_class") or "standing").lower()
+            b_conf = round(float(v_res.get("confidence") or v_res.get("dominant_confidence") or 0.9) * 100)
 
-        behavior_map = {
-            "drinking": ("Drinking Behavior", "Animal is ingesting water at drinker/trough. Adequate hydration (60-120 L/day) is essential for metabolic homeokinesis and milk synthesis."),
-            "feeding": ("Feeding Behavior", "Active forage/TMR consumption. Consistent dry matter intake supports rumen microbial protein synthesis."),
-            "lying": ("Lying / Resting Posture", "Recumbent rest observed. Proper stall comfort facilitates mammary blood perfusion and joint relief."),
-            "rumination": ("Rumination (Cud Chewing)", "Active rumination observed. Physiological cud chewing generates essential sodium bicarbonate saliva buffering against rumen acidosis."),
-            "standing": ("Standing Posture", "Upright alert or idling posture. Normal baseline daylight posture."),
-        }
+            # Save to history
+            save_history_entry({
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "type": "vision_video" if is_vid else "vision",
+                "filename": v_source_name,
+                "predicted_class": b_cls,
+                "confidence": v_res.get("confidence", 0.0),
+                "details": v_res,
+            })
 
-        b_title, b_advice = behavior_map.get(b_cls, (b_cls.capitalize(), v_res.get("description", "Observed posture classification.")))
+            behavior_map = {
+                "drinking": ("Drinking Behavior", "Animal is ingesting water at drinker/trough. Adequate hydration (60-120 L/day) is essential for metabolic homeokinesis and milk synthesis."),
+                "feeding": ("Feeding Behavior", "Active forage/TMR consumption. Consistent dry matter intake supports rumen microbial protein synthesis."),
+                "lying": ("Lying / Resting Posture", "Recumbent rest observed. Proper stall comfort facilitates mammary blood perfusion and joint relief."),
+                "rumination": ("Rumination (Cud Chewing)", "Active rumination observed. Physiological cud chewing generates essential sodium bicarbonate saliva buffering against rumen acidosis."),
+                "standing": ("Standing Posture", "Upright alert or idling posture. Normal baseline daylight posture."),
+            }
 
-        st.markdown(f"""
-        <div class="result-box-neutral">
-            <h4 style="color:#0f172a; margin-bottom:4px;">{b_title} &bull; {b_conf}% Confidence</h4>
-            <div class="advice-content">
-                {b_advice}
+            b_title, b_advice = behavior_map.get(b_cls, (b_cls.capitalize(), v_res.get("description", "Observed posture classification.")))
+
+            st.markdown(f"""
+            <div class="result-box-neutral">
+                <div class="result-tag-label">BEHAVIORAL INFERENCE RESULT</div>
+                <div class="result-heading-text">{b_title} &bull; {b_conf}% Confidence</div>
+                <div class="advice-content">
+                    {b_advice}
+                </div>
             </div>
-        </div>
-        """, unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
 
 # =======================================================
 # TAB 3: LACTATION BENCHMARKS
 # =======================================================
 with tab_roi:
     st.markdown("### Physiological & Lactation Productivity Benchmarks")
-    st.write("Reference metrics linking behavioral observation to dairy herd yield and welfare.")
+    st.caption("Empirical livestock benchmarks correlating ethological posture time budgets with commercial dairy yield and welfare standards.")
 
     st.markdown("""
     <div class="guidance-metric-card">
-        <h4 style="color:#0f172a; margin-bottom:6px;">1. Resting Time & Mammary Blood Flow</h4>
-        <p style="color:#475569; font-size:0.9rem; line-height:1.5;">
+        <div class="guidance-index">[ 01 ]</div>
+        <div class="guidance-title">Resting Time & Mammary Blood Flow</div>
+        <div class="guidance-body">
             Dairy cattle require 10 to 14 hours of daily stall rest. Blood perfusion through the mammary gland increases by up to 50% during recumbency, correlating with approximately +1.2 kg of daily milk yield per additional hour of rest.
-        </p>
+        </div>
     </div>
     
     <div class="guidance-metric-card">
-        <h4 style="color:#0f172a; margin-bottom:6px;">2. Rumination & Butterfat Synthesis</h4>
-        <p style="color:#475569; font-size:0.9rem; line-height:1.5;">
+        <div class="guidance-index">[ 02 ]</div>
+        <div class="guidance-title">Rumination & Butterfat Synthesis</div>
+        <div class="guidance-body">
             Standard rumination duration is 400 to 600 minutes daily. Endogenous saliva production provides sodium bicarbonate buffering, preventing subacute rumen acidosis (SARA) and stabilizing milk fat percentages.
-        </p>
+        </div>
     </div>
     
     <div class="guidance-metric-card">
-        <h4 style="color:#0f172a; margin-bottom:6px;">3. Acoustic Distress & Cortisol Impact</h4>
-        <p style="color:#475569; font-size:0.9rem; line-height:1.5;">
+        <div class="guidance-index">[ 03 ]</div>
+        <div class="guidance-title">Acoustic Distress & Cortisol Impact</div>
+        <div class="guidance-body">
             Elevated pitch vocalizations correlate with acute cortisol and catecholamine secretion. Hormonal surges inhibit oxytocin-mediated milk letdown, leading to residual milk retention and potential yield declines of 2.0 to 3.5 liters per event.
-        </p>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -429,6 +618,7 @@ with tab_roi:
 # =======================================================
 with tab_history:
     st.markdown("### Diagnostic Screening Logs")
+    st.caption("Chronological record of acoustic and visual inference queries.")
     history_data = load_history()
 
     if not history_data:

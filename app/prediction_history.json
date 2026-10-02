@@ -1,5 +1,92 @@
 [
   {
+    "timestamp": "2026-10-02 19:48:14",
+    "type": "audio",
+    "filename": "Calm Contact Murmur (Positive)",
+    "predicted_class": "Positive",
+    "confidence": 0.9703,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.9703,
+      "probabilities": {
+        "Negative": 0.0297,
+        "Positive": 0.9703
+      },
+      "speech_confidence": 1.9,
+      "cattle_confidence": 6.0,
+      "audio_metrics": {
+        "duration_sec": 1.2,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.2862,
+        "spectral_centroid_hz": 240.8,
+        "spectral_rolloff_hz": 414.7,
+        "zero_crossing_rate": 0.0168,
+        "f0_pitch_hz": 341.7,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "Low-Frequency (Closed-Mouth) Call",
+        "call_type_description": "Closed-mouth low murmur or contact call typically produced during calm proximity, maternal nursing, or rest."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-10-02 19:45:51",
+    "type": "audio",
+    "filename": "cattle_positive_sample.wav",
+    "predicted_class": "Positive",
+    "confidence": 0.9703,
+    "details": {
+      "is_cattle_call": true,
+      "is_human_speech": false,
+      "signal_classification": "Cattle Vocalization",
+      "class": "Positive",
+      "confidence": 0.9703,
+      "probabilities": {
+        "Negative": 0.0297,
+        "Positive": 0.9703
+      },
+      "speech_confidence": 1.9,
+      "cattle_confidence": 6.0,
+      "audio_metrics": {
+        "duration_sec": 1.2,
+        "sampling_rate_hz": 16000,
+        "rms_energy": 0.2862,
+        "spectral_centroid_hz": 240.8,
+        "spectral_rolloff_hz": 414.7,
+        "zero_crossing_rate": 0.0168,
+        "f0_pitch_hz": 341.7,
+        "arousal_level": "High Arousal",
+        "call_type_estimate": "Low-Frequency (Closed-Mouth) Call",
+        "call_type_description": "Closed-mouth low murmur or contact call typically produced during calm proximity, maternal nursing, or rest."
+      },
+      "behavioral_context": "Acoustic features indicate Positive Emotional Valence. In cattle ethology, this acoustic profile is observed during social reunions, pen-mate contact, or maternal-offspring affiliative interaction."
+    }
+  },
+  {
+    "timestamp": "2026-10-02 19:45:25",
+    "type": "vision",
+    "filename": "sample_rumination.jpg",
+    "predicted_class": "lying",
+    "confidence": 0.2775999903678894,
+    "details": {
+      "class": "lying",
+      "confidence": 0.2775999903678894,
+      "probabilities": {
+        "drinking": 0.18479999899864197,
+        "feeding": 0.21369999647140503,
+        "lying": 0.2775999903678894,
+        "rumination": 0.1517000049352646,
+        "standing": 0.1720999926328659
+      },
+      "description": "Cattle is resting in sternal or lateral recumbency. Critical for rumination, hoof health, and overall dairy herd welfare (typically 10-14 hours/day).",
+      "model": "ResNet18 (Convolutional Neural Network)",
+      "device": "cpu"
+    }
+  },
+  {
     "timestamp": "2026-09-23 09:02:12",
     "type": "vision",
     "filename": "sample_drinking.jpg",
